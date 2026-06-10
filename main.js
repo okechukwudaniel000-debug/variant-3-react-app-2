@@ -925,7 +925,7 @@ function initCounters() {
   document.querySelectorAll('.tnum').forEach(el => cio.observe(el));
 }
 
-/* ============================================================
+/* =============================================================
    UTILITY
 ============================================================ */
 window.goWA = function() { window.open('https://wa.me/2349132715125', '_blank', 'noopener,noreferrer'); }
