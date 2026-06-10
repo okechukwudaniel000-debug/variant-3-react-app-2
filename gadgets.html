@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium gadgets and smartphones at Daniel Gadgets. Official products with warranty.">
+<title>Daniel Gadgets | Premium Technology & Accessories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======== NAV ======== -->
+<nav class="topnav" role="navigation">
+  <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-brand">Daniel<em>Gadgets</em></div>
+  <div class="nav-right" style="display:flex;align-items:center;gap:15px">
+    <button class="nav-icon" id="userBtn" aria-label="Account" style="color:var(--txt)">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ======== SIDE MENU OVERLAY ======== -->
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+
+<!-- ======== SIDE MENU ======== -->
+<aside class="sidemenu" id="sidemenu" role="navigation">
+  <div class="menu-head">
+    <div class="menu-brand">Daniel<em>Gadgets</em></div>
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="menu-nav">
+    <a href="#" class="mlink"><span>Home</span></a>
+    <a href="#products" class="mlink"><span>Featured Products</span></a>
+    <a href="#reviews" class="mlink"><span>Customer Reviews</span></a>
+    <a href="#about" class="mlink"><span>About Our Brand</span></a>
+    <a href="#contact" class="mlink"><span>Get in Touch</span></a>
+  </nav>
+  <div class="menu-sep"></div>
+  <div class="menu-foot">
+    <button class="theme-btn" id="themeBtn">
+      <span id="tLabel">Switch to Light</span>
+      <div class="toggle-pill"></div>
+    </button>
+  </div>
+</aside>
+
+<!-- ======== AUTH MODAL ======== -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-modal">
+    <button class="auth-close" id="authClose">&times;</button>
+    
+    <div id="loginForm">
+      <div class="auth-header">
+        <h2 class="auth-title">Welcome Back</h2>
+        <p class="auth-sub">Enter your details to access your account</p>
+      </div>
+      <form class="auth-form" id="lForm">
+        <div class="auth-input-group">
+          <label class="auth-label">Email Address</label>
+          <input type="email" class="auth-input" id="lEmail" placeholder="name@example.com" required>
+        </div>
+        <div class="auth-input-group">
+          <label class="auth-label">Password</label>
+          <input type="password" class="auth-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="auth-btn">Sign In</button>
+      </form>
+      <p class="auth-switch">Don't have an account? <span class="auth-switch-btn" id="toRegister">Sign up</span></p>
+    </div>
+
+    <div id="registerForm">
+      <div class="auth-header">
+        <h2 class="auth-title">Join Daniel Gadgets</h2>
+        <p class="auth-sub">Create an account to start shopping</p>
+      </div>
+      <form class="auth-form" id="rForm">
+        <div class="auth-input-group">
+          <label class="auth-label">Full Name</label>
+          <input type="text" class="auth-input" id="rName" placeholder="John Doe" required>
+        </div>
+        <div class="auth-input-group">
+          <label class="auth-label">Email Address</label>
+          <input type="email" class="auth-input" placeholder="name@example.com" required>
+        </div>
+        <div class="auth-input-group">
+          <label class="auth-label">Password</label>
+          <input type="password" class="auth-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="auth-btn">Create Account</button>
+      </form>
+      <p class="auth-switch">Already have an account? <span class="auth-switch-btn" id="toLogin">Sign in</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ======== HERO ======== -->
+<section class="hero">
+  <canvas id="hcvs"></canvas>
+  <div class="hero-grad"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-follow" id="hFollow"></div>
+  
+  <div class="hero-con">
+    <div class="hero-badge">
+      <span class="badge-dot"></span> New 2026 Collection Live
+    </div>
+    <h1 class="hero-h1">
+      <span class="h1-main">DANIEL</span>
+      <span class="h1-accent">GADGETS</span>
+    </h1>
+    <p class="hero-sub">Where Innovation Meets Authentic Craftsmanship.</p>
+    <p class="hero-p">Experience the next generation of smartphones and premium accessories from the world's most trusted brands.</p>
+    
+    <div class="hero-btns">
+      <button class="btn-p" onclick="document.getElementById('products').scrollIntoView()">Shop Collection</button>
+      <button class="btn-s" onclick="openTikTok()">Watch Tech Reviews</button>
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <div class="scroll-t">Scroll</div>
+  </div>
+</section>
+
+<!-- ======== TRUST ======== -->
+<div class="trust">
+  <div class="trust-grid">
+    <div class="titem"><div class="tnum" data-to="50" data-sfx="K+">0</div><div class="tlbl">Customers</div></div>
+    <div class="titem"><div class="tnum" data-to="100" data-sfx="%" data-dec="0">0</div><div class="tlbl">Authentic</div></div>
+    <div class="titem"><div class="tnum" data-to="24" data-sfx="/7">0</div><div class="tlbl">Support</div></div>
+    <div class="titem"><div class="tnum" data-to="4.9" data-sfx="/5" data-dec="1">0</div><div class="tlbl">Rating</div></div>
+  </div>
+</div>
+
+<!-- ======== PRODUCTS ======== -->
+<section class="sec products" id="products">
+  <div class="hud-corner hud-tl"></div><div class="hud-corner hud-tr"></div>
+  <div class="hud-corner hud-bl"></div><div class="hud-corner hud-br"></div>
+  
+  <div class="sec-c fu">
+    <div class="label">Our Collection</div>
+    <h2 class="sec-title">Featured Devices</h2>
+    <p class="sec-sub">Curated high-performance technologies for the modern professionals.</p>
+  </div>
+
+  <div class="p-filters fu">
+    <button class="f-btn active" data-filter="all">All</button>
+    <button class="f-btn" data-filter="phones">Phones</button>
+    <button class="f-btn" data-filter="laptops">Laptops</button>
+    <button class="f-btn" data-filter="accessories">Accessories</button>
+  </div>
+
+  <div class="pgrid">
+    <!-- Loaded dynamically via main.js -->
+  </div>
+</section>
+
+<!-- ======== FEATURES ======== -->
+<section class="sec features">
+  <div class="sec-c fu">
+    <div class="label">Why Choose Us</div>
+    <h2 class="sec-title">The Daniel Edge</h2>
+    <p class="sec-sub">We don't just sell gadgets; we deliver the future of connectivity.</p>
+  </div>
+  <div class="fgrid">
+    <div class="fcard fu d1">
+      <div class="ficon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <h3 class="ftitle">Official Warranty</h3>
+      <p class="ftxt">Every device comes with a comprehensive manufacturer's warranty for peace of mind.</p>
+    </div>
+    <div class="fcard fu d2">
+      <div class="ficon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      </div>
+      <h3 class="ftitle">Global Logistics</h3>
+      <p class="ftxt">Express worldwide shipping with real-time tracking from our hub to your doorstep.</p>
+    </div>
+    <div class="fcard fu d3">
+      <div class="ficon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h3 class="ftitle">Secure Checkout</h3>
+      <p class="ftxt">Military-grade encryption for all transactions. We support Crypto & Fiat payments.</p>
+    </div>
+    <div class="fcard fu d4">
+      <div class="ficon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      </div>
+      <h3 class="ftitle">Expert Support</h3>
+      <p class="ftxt">Our dedicated tech specialists are available 24/7 to assist with your setup and queries.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== REVIEWS ======== -->
+<section class="sec reviews" id="reviews">
+  <div class="sec-c fu">
+    <div class="label">Testimonials</div>
+    <h2 class="sec-title">What Tech Lovers Say</h2>
+  </div>
+  <div class="reviews-wrap">
+    <div class="rv-container">
+      <div class="rv-track" id="rvTrack">
+        <!-- Loaded dynamically via main.js -->
+      </div>
+    </div>
+    <div class="cc">
+      <button class="cbtn" id="rvPrev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div id="rvDots" class="cc" style="margin-top:0"></div>
+      <button class="cbtn" id="rvNext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ======== ABOUT ======== -->
+<section class="sec about" id="about">
+  <div class="about-inner fu">
+    <div class="label">Behind The Brand</div>
+    <h2 class="sec-title">Defining Tomorrow</h2>
+    <p class="about-txt">Founded in 2020, Daniel Gadgets has become a beacon for technology enthusiasts in Nigeria and beyond. We believe that technology should be accessible, authentic, and empowering. Our mission is to bridge the gap between innovation and reality, providing our customers with the tools they need to thrive in a digital world.</p>
+    <div class="about-line"></div>
+  </div>
+</section>
+
+<!-- ======== CONTACT ======== -->
+<section class="sec contact" id="contact">
+  <div class="sec-c fu">
+    <div class="label">Connect</div>
+    <h2 class="sec-title">Join Our Community</h2>
+    <p class="sec-sub">Stay updated with the latest tech drops and exclusive offers.</p>
+  </div>
+  <div class="cicons">
+    <div class="citem fu d1">
+      <a href="https://wa.me/2349132715125" target="_blank" class="clink" style="--pc:#25D366">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <span class="clbl">WhatsApp</span>
+    </div>
+    <div class="citem fu d2">
+      <a href="https://www.tiktok.com/@danielclothings_" target="_blank" class="clink" style="--pc:#000">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </a>
+      <span class="clbl">TikTok</span>
+    </div>
+    <div class="citem fu d3">
+      <a href="https://t.me/DanielClothings000" target="_blank" class="clink" style="--pc:#0088cc">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.53.26l.195-2.82 5.12-4.62c.22-.19-.047-.304-.34-.11l-6.33 3.98-2.73-.85c-.594-.185-.605-.594.124-.88l10.66-4.11c.494-.18.927.115.75.96z"/></svg>
+      </a>
+      <span class="clbl">Telegram</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer role="contentinfo" class="futuristic-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <div class="ft-logo">Daniel<em>Gadgets</em></div>
+      <p class="ft-tag">"Premium Technology. Trusted Services."</p>
+    </div>
+    <div class="footer-badges">
+      <span>Official Retailer</span>
+      <span>Authentic Only</span>
+      <span>24-Hour Delivery</span>
+    </div>
+    <div class="footer-status">
+      <span class="status-dot"></span> System Operational
+    </div>
+  </div>
+  <p class="ft-copy">© 2026 Daniel Gadgets. All Rights Reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+/* ============================================================
+   HERO CANVAS — FLOATING DEVICES
+============================================================ */
+const cvs = document.getElementById('hcvs');
+const ctx = cvs.getContext('2d');
+let scrollTop = 0, devs = [], raf;
+
+function rrect(c, x, y, w, h, r) {
+  r = Math.min(r, w / 2, h / 2);
+  c.beginPath();
+  c.moveTo(x + r, y); c.lineTo(x + w - r, y);
+  c.arcTo(x + w, y, x + w, y + r, r); c.lineTo(x + w, y + h - r);
+  c.arcTo(x + w, y + h, x + w - r, y + h, r); c.lineTo(x + r, y + h);
+  c.arcTo(x, y + h, x, y + h - r, r); c.lineTo(x, y + r);
+  c.arcTo(x, y, x + r, y, r); c.closePath();
+}
+
+function drawDevice(c, x, y, w, h, rot, alpha, isSam) {
+  c.save();
+  c.globalAlpha = alpha;
+  c.translate(x, y);
+  c.rotate(rot);
+
+  c.shadowColor = isSam ? 'var(--accent-cyan)' : 'var(--accent-violet)';
+  c.shadowBlur = 20;
+
+  const g = c.createLinearGradient(-w / 2, -h / 2, w / 2, h / 2);
+  if (isSam) {
+    g.addColorStop(0, 'rgba(0,242,255,0.3)');
+    g.addColorStop(1, 'rgba(0,100,255,0.1)');
+  } else {
+    g.addColorStop(0, 'rgba(188,0,255,0.3)');
+    g.addColorStop(1, 'rgba(100,0,255,0.1)');
+  }
+  rrect(c, -w / 2, -h / 2, w, h, w * .12);
+  c.fillStyle = g; c.fill();
+
+  c.shadowBlur = 0;
+  c.strokeStyle = isSam ? 'var(--accent-cyan)' : 'var(--accent-violet)';
+  c.lineWidth = 1; c.stroke();
+
+  rrect(c, -w / 2 + w * .07, -h / 2 + h * .1, w * .86, h * .72, w * .09);
+  c.fillStyle = 'rgba(255,255,255,0.05)'; c.fill();
+  c.restore();
+}
+
+function initDevs() {
+  const W = cvs.offsetWidth || window.innerWidth;
+  const H = cvs.offsetHeight || window.innerHeight;
+  const cx = W / 2, cy = H / 2;
+  devs = [];
+  const cnt = Math.min(20, Math.floor(W / 50));
+  for (let i = 0; i < cnt; i++) {
+    const p = i / cnt;
+    const th = p * Math.PI * 6;
+    const r = 80 + p * Math.min(W, H) * .45;
+    devs.push({
+      bx: cx + Math.cos(th) * r,
+      by: cy + Math.sin(th) * r * .6,
+      w: 30 + Math.random() * 20,
+      rot: Math.random() * Math.PI * 2,
+      sam: Math.random() > 0.5,
+      sp: 0.15 + Math.random() * 0.2,
+      px: Math.random() * Math.PI * 2,
+      py: Math.random() * Math.PI * 2,
+      pf: (0.05 + Math.random() * 0.1) * (Math.random() > .5 ? 1 : -1),
+      a: 0.2 + Math.random() * 0.4,
+      fx: 10 + Math.random() * 15,
+      fy: 12 + Math.random() * 18,
+    });
+  }
+}
+
+function draw(ts) {
+  const t = ts * .001;
+  const W = cvs.offsetWidth;
+  const H = cvs.offsetHeight;
+  ctx.clearRect(0, 0, W, H);
+
+  // Draw network lines
+  ctx.beginPath();
+  ctx.strokeStyle = 'var(--hud-line)';
+  ctx.lineWidth = 0.5;
+  for (let i = 0; i < devs.length; i++) {
+    for (let j = i + 1; j < devs.length; j++) {
+      const d1 = devs[i], d2 = devs[j];
+      const x1 = d1.bx + Math.sin(t * d1.sp + d1.px) * d1.fx;
+      const y1 = d1.by + Math.cos(t * d1.sp * .7 + d1.py) * d1.fy + scrollTop * d1.pf * .2;
+      const x2 = d2.bx + Math.sin(t * d2.sp + d2.px) * d2.fx;
+      const y2 = d2.by + Math.cos(t * d2.sp * .7 + d2.py) * d2.fy + scrollTop * d2.pf * .2;
+      const dist = Math.hypot(x1 - x2, y1 - y2);
+      if (dist < 200) {
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+      }
+    }
+  }
+  ctx.stroke();
+
+  devs.forEach(d => {
+    const fx = Math.sin(t * d.sp + d.px) * d.fx;
+    const fy = Math.cos(t * d.sp * .7 + d.py) * d.fy;
+    const po = scrollTop * d.pf * .28;
+    const dw = d.w, dh = dw * 2.1;
+    drawDevice(ctx, d.bx + fx, d.by + fy + po, dw, dh, d.rot + t * 0.2, d.a, d.sam);
+  });
+  raf = requestAnimationFrame(draw);
+}
+
+function resize() {
+  const rect = cvs.parentElement.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  cvs.width = rect.width * dpr;
+  cvs.height = rect.height * dpr;
+  cvs.style.width = rect.width + 'px';
+  cvs.style.height = rect.height + 'px';
+  ctx.scale(dpr, dpr);
+  initDevs();
+}
+
+window.addEventListener('load', () => { resize(); raf = requestAnimationFrame(draw); });
+window.addEventListener('resize', () => { clearTimeout(window._rt); window._rt = setTimeout(resize, 200); });
+window.addEventListener('scroll', () => { scrollTop = window.scrollY; }, { passive: true });
+
+/* ============================================================
+   HERO MOUSE GLOW
+============================================================ */
+const hFollow = document.getElementById('hFollow');
+const heroSec = document.querySelector('.hero');
+if (heroSec && hFollow) {
+  heroSec.addEventListener('mousemove', e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+    hFollow.style.left = x + 'px';
+    hFollow.style.top = y + 'px';
+  }, { passive: true });
+}
+</script>
+
+</body>
+</html>

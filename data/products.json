@@ -1,0 +1,206 @@
+[
+  {
+    "id": "s25u",
+    "brand": "Samsung Galaxy",
+    "category": "phones",
+    "name": "Galaxy S25 Ultra",
+    "description": "Titanium build, 200MP camera system, built-in S-Pen, Galaxy AI.",
+    "price": 1110000,
+    "stock": true,
+    "specs": {
+      "Processor": "SD 8 Gen 4",
+      "Display": "6.8\" AMOLED 2X",
+      "Camera": "200MP Quad",
+      "Battery": "5000mAh"
+    },
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
+  },
+  {
+    "id": "i16pm",
+    "brand": "Apple iPhone",
+    "category": "phones",
+    "name": "iPhone 16 Pro Max",
+    "description": "A18 Pro chip, 64MP Fusion Camera, Action Button, titanium design.",
+    "price": 1200000,
+    "stock": true,
+    "specs": {
+      "Chipset": "A18 Pro Bionic",
+      "Display": "6.9\" ProMotion",
+      "Storage": "256GB - 1TB",
+      "Video": "4K 120fps ProRes"
+    },
+    "image": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
+  },
+  {
+    "id": "aw10",
+    "brand": "Apple Watch",
+    "category": "accessories",
+    "name": "Apple Watch Series 10",
+    "description": "Thinnest Apple Watch ever, advanced health monitoring, 18 hr battery.",
+    "price": 350000,
+    "stock": true,
+    "specs": {
+      "Sensor": "Blood Oxygen",
+      "Display": "OLED Always-On",
+      "Rating": "WR50 Water Res.",
+      "Battery": "18-36 Hours"
+    },
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
+  },
+  {
+    "id": "gb3p",
+    "brand": "Samsung Galaxy",
+    "category": "accessories",
+    "name": "Galaxy Buds 3 Pro",
+    "description": "Intelligent ANC, 3-way speaker system, 360° audio, 30 hr total battery.",
+    "price": 98000,
+    "stock": true,
+    "specs": {
+      "Audio": "Hi-Fi 24-bit",
+      "ANC": "Intelligent",
+      "Connectivity": "BT 5.4",
+      "Battery": "30hrs w/ Case"
+    },
+    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
+  },
+  {
+    "id": "i15",
+    "brand": "Apple iPhone",
+    "category": "phones",
+    "name": "iPhone 15",
+    "description": "48MP main camera, Dynamic Island, USB-C, A16 Bionic chip.",
+    "price": 850000,
+    "stock": true,
+    "specs": {
+      "Chip": "A16 Bionic",
+      "Display": "Super Retina XDR",
+      "Camera": "48MP Main",
+      "Port": "USB-C"
+    },
+    "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
+  },
+  {
+    "id": "ga55",
+    "brand": "Samsung Galaxy",
+    "category": "phones",
+    "name": "Galaxy A55",
+    "description": "50MP OIS camera, Exynos 1480, IP67 water resistance, Super AMOLED.",
+    "price": 320000,
+    "stock": true,
+    "specs": {
+      "Processor": "Exynos 1480",
+      "Display": "120Hz AMOLED",
+      "Protection": "IP67 Rated",
+      "Battery": "5000mAh"
+    },
+    "image": "https://images.unsplash.com/photo-1610945415295-d9baf060e871?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
+  },
+  {
+    "id": "mbpm4",
+    "brand": "Apple",
+    "category": "laptops",
+    "name": "MacBook Pro M4",
+    "description": "The world's most advanced laptop for workflows that demand extreme performance.",
+    "price": 2450000,
+    "stock": false,
+    "specs": {
+      "Processor": "Apple M4 Max",
+      "Display": "14\" Liquid Retina",
+      "Memory": "36GB - 128GB",
+      "Battery": "Up to 22 Hours"
+    },
+    "image": "https://images.unsplash.com/photo-1517336714460-4c5049c6146c?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(150,155,180,.12),rgba(80,85,110,.18))"
+  },
+  {
+    "id": "ippm4",
+    "brand": "Apple",
+    "category": "laptops",
+    "name": "iPad Pro 13\" (M4)",
+    "description": "Unbelievable performance and the world's most advanced display.",
+    "price": 1550000,
+    "stock": true,
+    "specs": {
+      "Display": "Ultra Retina XDR",
+      "Chip": "Apple M4",
+      "Design": "5.1mm Ultra Thin",
+      "Input": "Pencil Pro Support"
+    },
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(188,0,255,.1),rgba(60,0,100,.2))"
+  },
+  {
+    "id": "cgar",
+    "brand": "Samsung",
+    "category": "accessories",
+    "name": "Cyber Glass AR",
+    "description": "Next-gen smart eyeglasses with integrated AR display and AI vision.",
+    "price": 420000,
+    "stock": true,
+    "specs": {
+      "Visuals": "HUD AR Overlay",
+      "Camera": "12MP Ultra-wide",
+      "AI": "Voice Controlled",
+      "Audio": "Open-ear Spatial"
+    },
+    "image": "https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(0,242,255,.1),rgba(0,80,120,.2))"
+  },
+  {
+    "id": "dxps16",
+    "brand": "Dell",
+    "category": "laptops",
+    "name": "Dell XPS 16 (2026)",
+    "description": "The iconic seamless design powered by the latest Intel Core Ultra processors.",
+    "price": 2150000,
+    "stock": true,
+    "specs": {
+      "Processor": "Core Ultra 9 185H",
+      "Graphics": "RTX 4070 8GB",
+      "Display": "4K OLED Touch",
+      "Design": "Seamless Glass"
+    },
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(200,200,200,.1),rgba(80,80,80,.15))"
+  },
+  {
+    "id": "am18r2",
+    "brand": "Alienware",
+    "category": "laptops",
+    "name": "Alienware m18 R2",
+    "description": "Maximum performance with an 18-inch display and elite Alienware Cryo-tech.",
+    "price": 3850000,
+    "stock": true,
+    "specs": {
+      "Processor": "i9-14900HX",
+      "Graphics": "RTX 4090 16GB",
+      "Refresh": "480Hz QHD+",
+      "Cooling": "Cryo-Tech Liquid"
+    },
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(188,0,255,.15),rgba(50,0,100,.2))"
+  },
+  {
+    "id": "ps6",
+    "brand": "PlayStation",
+    "category": "accessories",
+    "name": "PlayStation 6",
+    "description": "The future of immersive gaming with 16K visuals and advanced neural feedback.",
+    "price": 950000,
+    "stock": true,
+    "specs": {
+      "Resolution": "Native 16K HDR",
+      "Graphics": "Ray Tracing Gen 3",
+      "Storage": "4TB Quantum SSD",
+      "Feature": "Neural Haptic Link"
+    },
+    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,242,255,.1))"
+  }
+]

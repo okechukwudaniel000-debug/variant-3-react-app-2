@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "initials": "CA",
+    "name": "Chinedu A.",
+    "location": "Lagos, Nigeria",
+    "text": "Excellent service and authentic products. My iPhone arrived exactly as described — sealed and brand new. Will absolutely shop here again!",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#1428A0,#00020bd5)"
+  },
+  {
+    "id": 2,
+    "initials": "GO",
+    "name": "Grace O.",
+    "location": "Abuja, Nigeria",
+    "text": "Very reliable store. The Samsung Galaxy device I purchased works perfectly. Great customer service and very fair pricing.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#000000,#1a9050)"
+  },
+  {
+    "id": 3,
+    "initials": "ME",
+    "name": "Michael E.",
+    "location": "Port Harcourt, Nigeria",
+    "text": "Fast delivery and professional communication throughout. Highly recommended for anyone looking for genuine gadgets at reasonable prices.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#501090,#0c0412)"
+  },
+  {
+    "id": 4,
+    "initials": "OE",
+    "name": "Obong E.",
+    "location": "Calabar, Nigeria",
+    "text": "Passionate and dedicated services. I highly recommend this brand for anyone looking for genuine gadgets at affordable prices.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#8f0c54,#7a990b)"
+  },
+  {
+    "id": 5,
+    "initials": "CA",
+    "name": "Chioma A.",
+    "location": "Enugu, Nigeria",
+    "text": "My package arrived completely sealed, 100% original, and beautifully boxed. Absolute peace of mind!",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#036308,#6b13b4)"
+  },
+  {
+    "id": 6,
+    "initials": "TO",
+    "name": "Tunde O.",
+    "location": "Ibadan, Nigeria",
+    "text": "I bought a smartwatch in the morning, and it was in my hands before evening. The customer service team kept me updated every step of the way.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#2e0755,#c10194)"
+  },
+  {
+    "id": 7,
+    "initials": "AM",
+    "name": "Amina M.",
+    "location": "Wuse Abuja, Nigeria",
+    "text": "Bought a pair of wireless earbuds and a laptop charger. Both work perfectly and the sound quality on the buds is exceptional.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#0e5b5c,#fff200)"
+  },
+  {
+    "id": 8,
+    "initials": "AA",
+    "name": "Clement I.",
+    "location": "Oyo, Nigeria",
+    "text": "I was incredibly skeptical about buying a high-end device online, but Daniel Gadgets proved me wrong. I can assure you that it's a reliable brand.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#d2375e,#050304)"
+  },
+  {
+    "id": 9,
+    "initials": "AA",
+    "name": "Amaka A.",
+    "location": "Enugu, Nigeria",
+    "text": "Purchased an Apple Watch and I am completely blown away by the quality. The team was responsive and helpful every step of the process.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#c7be0f,#621126)"
+  },
+  {
+    "id": 10,
+    "initials": "OB",
+    "name": "Oluwaseun B.",
+    "location": "Ibadan, Nigeria",
+    "text": "Best gadget store I have encountered online. The authenticity guarantee gives me confidence every time I place an order. A truly 10/10 experience.",
+    "stars": 5,
+    "color": "linear-gradient(135deg,#431b00,#015570)"
+  }
+]
