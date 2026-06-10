@@ -17,15 +17,13 @@ app.use((req, res, next) => {
 const corsOptions = {
   origin: function (origin, callback) {
     // Basic allowed origins
+    // Anchored patterns only — an unanchored /localhost/ would match a
+    // malicious origin like https://localhost.attacker.com.
     const baseOrigins = [
-      'http://localhost:3000',
-      'http://localhost:5000',
-      'http://127.0.0.1:3000',
-      'http://127.0.0.1:5000',
-      /localhost/,
-      /127\.0\.0\.1/,
-      /gadgets\.local$/,
-      /daniel-gadgets\.com$/
+      /^https?:\/\/localhost(:\d+)?$/,
+      /^https?:\/\/127\.0\.0\.1(:\d+)?$/,
+      /^https?:\/\/([a-z0-9-]+\.)*gadgets\.local(:\d+)?$/,
+      /^https?:\/\/([a-z0-9-]+\.)*daniel-gadgets\.com$/
     ];
 
     // Merge with origins from environment variables if any

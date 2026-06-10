@@ -148,7 +148,8 @@ export default function Hero() {
         const dh = dw * 2.1;
         drawDevice(ctx, d.bx + fx, d.by + fy + po, dw, dh, d.rot + t * 0.2, d.a, d.sam);
       });
-      raf = requestAnimationFrame(draw);
+      // Honour reduced-motion: render a single static frame, no loop.
+      if (!reduceMotion) raf = requestAnimationFrame(draw);
     }
 
     function resize() {
@@ -176,11 +177,17 @@ export default function Hero() {
       hFollow.style.top = e.clientY - r.top + 'px';
     };
 
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     resize();
-    raf = requestAnimationFrame(draw);
+    if (reduceMotion) {
+      // One static frame; skip the animation loop and pointer/scroll parallax.
+      draw(0);
+    } else {
+      raf = requestAnimationFrame(draw);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      if (heroSec && hFollow) heroSec.addEventListener('mousemove', onMouseMove, { passive: true });
+    }
     window.addEventListener('resize', onResize);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    if (heroSec && hFollow) heroSec.addEventListener('mousemove', onMouseMove, { passive: true });
 
     return () => {
       cancelAnimationFrame(raf);
@@ -196,7 +203,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="hero" ref={heroRef}>
+    <section className="hero" id="main-content" ref={heroRef}>
       <canvas id="hcvs" ref={canvasRef}></canvas>
       <div className="hero-grad"></div>
       <div className="hero-grid"></div>
@@ -212,8 +219,8 @@ export default function Hero() {
         </h1>
         <p className="hero-sub">Where Innovation Meets Authentic Craftsmanship.</p>
         <p className="hero-p">
-          Experience the next generation of smartphones and premium accessories from the world&apos;s
-          most trusted brands...
+          Experience the next generation of smartphones and premium accessories from the
+          world&apos;s most trusted brands...
         </p>
 
         <div className="hero-btns">

@@ -35,7 +35,9 @@ export default function Features() {
       <div className="sec-c fu">
         <div className="label">Why Choose Us</div>
         <h2 className="sec-title">The Daniel Edge</h2>
-        <p className="sec-sub">We don&apos;t just sell gadgets; we deliver the future of connectivity.</p>
+        <p className="sec-sub">
+          We don&apos;t just sell gadgets; we deliver the future of connectivity.
+        </p>
       </div>
       <div className="fgrid">
         {FEATURES.map((f) => (

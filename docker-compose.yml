@@ -10,7 +10,7 @@ services:
       - NODE_ENV=production
       - ALLOWED_ORIGINS=http://gadgets.local,http://api.gadgets.local,http://products.gadgets.local,http://daniel-gadgets.com,http://api.daniel-gadgets.com,http://products.daniel-gadgets.com
     ports:
-      - "5000:5000"
+      - '5000:5000'
     volumes:
       - ./fullstack/backend/data:/app/data
 
@@ -19,7 +19,7 @@ services:
     image: nginx:alpine
     restart: always
     ports:
-      - "80:80"
+      - '80:80'
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - .:/usr/share/nginx/html:ro

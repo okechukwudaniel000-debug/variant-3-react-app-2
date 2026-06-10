@@ -3,15 +3,18 @@
 ## 🧪 Testing Scenarios
 
 ### Scenario 1: Local Development (File Protocol)
+
 **URL:** `file:///path/to/gadgets.html`
 
 **Expected Behavior:**
+
 - Static products display (fallback mode)
 - Filtering works on static cards
 - Console shows no API fetch errors (warning only)
 - All interactions work normally
 
 **Test Steps:**
+
 1. Open gadgets.html directly in browser
 2. Verify products display
 3. Click "Phones" filter - should show only phones
@@ -21,7 +24,9 @@
 ---
 
 ### Scenario 2: Localhost Development
+
 **Prerequisites:**
+
 ```bash
 cd fullstack/backend
 npm install
@@ -32,6 +37,7 @@ npm start
 **URL:** `http://localhost:3000` (or any local dev server)
 
 **Expected Behavior:**
+
 - API call to `http://localhost:5000/api/products`
 - Products load dynamically
 - Filtering works
@@ -40,6 +46,7 @@ npm start
 - Console shows: "Loaded 10 products"
 
 **Test Steps:**
+
 1. Start backend: `npm start` in fullstack/backend
 2. Open: `http://localhost:3000`
 3. Wait for products to load
@@ -52,19 +59,22 @@ npm start
 6. Click "View Details" or "Order Now" - redirects to WhatsApp
 
 **Console Verification:**
+
 ```javascript
 // In DevTools Console, type:
-API_CONFIG.getBaseURL()
+API_CONFIG.getBaseURL();
 // Should return: http://localhost:5000
 
-API_CONFIG.getProductsURL()
+API_CONFIG.getProductsURL();
 // Should return: http://localhost:5000/api/products
 ```
 
 ---
 
 ### Scenario 3: Subdomain Testing (Local)
+
 **Setup /etc/hosts (Mac/Linux):**
+
 ```
 127.0.0.1 localhost
 127.0.0.1 gadgets.local
@@ -72,6 +82,7 @@ API_CONFIG.getProductsURL()
 ```
 
 **Windows C:\Windows\System32\drivers\etc\hosts:**
+
 ```
 127.0.0.1 localhost
 127.0.0.1 gadgets.local
@@ -81,12 +92,14 @@ API_CONFIG.getProductsURL()
 **URL:** `http://gadgets.local`
 
 **Expected Behavior:**
+
 - Frontend detects "gadgets.local" domain
 - API_CONFIG routes to `http://api.gadgets.local:5000`
 - Products load from backend
 - Same filtering behavior as Scenario 2
 
 **Test Steps:**
+
 1. Edit hosts file with above entries
 2. Flush DNS cache:
    - **Mac:** `sudo dscacheutil -flushcache`
@@ -97,33 +110,39 @@ API_CONFIG.getProductsURL()
 5. Verify products load and filters work
 
 **Console Verification:**
+
 ```javascript
-API_CONFIG.getBaseURL()
+API_CONFIG.getBaseURL();
 // Should return: http://api.gadgets.local:5000
 ```
 
 ---
 
 ### Scenario 4: Production Setup (daniel-gadgets.com)
+
 **DNS Records:**
+
 ```
 daniel-gadgets.com       A → 123.45.67.89
 api.daniel-gadgets.com   A → 123.45.67.89
 ```
 
 **URLs:**
+
 - Main site: `https://daniel-gadgets.com`
 - API: `https://api.daniel-gadgets.com`
 
 **Expected Behavior:**
+
 - Frontend on daniel-gadgets.com
 - Auto-detects api subdomain
 - Fetches from `https://api.daniel-gadgets.com/api/products`
 - Full HTTPS/SSL support
 
 **Console Verification:**
+
 ```javascript
-API_CONFIG.getBaseURL()
+API_CONFIG.getBaseURL();
 // Should return: https://api.daniel-gadgets.com:443 (or without :443)
 ```
 
@@ -132,11 +151,13 @@ API_CONFIG.getBaseURL()
 ## 🧬 API Testing
 
 ### Test 1: Get All Products
+
 ```bash
 curl http://localhost:5000/api/products
 ```
 
 **Expected Response:**
+
 ```json
 [
   {
@@ -157,6 +178,7 @@ curl http://localhost:5000/api/products
 ---
 
 ### Test 2: Filter by Category
+
 ```bash
 curl "http://localhost:5000/api/products?category=phones"
 ```
@@ -178,11 +200,13 @@ curl "http://localhost:5000/api/products?category=accessories"
 ---
 
 ### Test 3: Get Single Product
+
 ```bash
 curl http://localhost:5000/api/products/s25u
 ```
 
 **Expected Response:**
+
 ```json
 {
   "id": "s25u",
@@ -207,11 +231,13 @@ curl http://localhost:5000/api/products/s25u
 ---
 
 ### Test 4: Invalid Product ID
+
 ```bash
 curl http://localhost:5000/api/products/invalid
 ```
 
 **Expected Response:**
+
 ```json
 {
   "error": "Product not found"
@@ -223,11 +249,13 @@ curl http://localhost:5000/api/products/invalid
 ---
 
 ### Test 5: CORS Headers
+
 ```bash
 curl -i http://localhost:5000/api/products
 ```
 
 **Look for in response:**
+
 ```
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET, POST, OPTIONS
@@ -239,6 +267,7 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 ## 🎨 Frontend Feature Testing
 
 ### Product Card Features
+
 - [ ] Stock badge displays correctly (In Stock / Out of Stock)
 - [ ] Stock dot pulses animation
 - [ ] Product image background gradient applied
@@ -250,6 +279,7 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 - [ ] "Order Now" button clickable
 
 ### Filter Buttons
+
 - [ ] Active filter highlighted
 - [ ] Products animate in/out (smooth transitions)
 - [ ] Filter logic works correctly
@@ -257,6 +287,7 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 - [ ] Category filtering accurate
 
 ### Existing Features (Should Still Work)
+
 - [ ] Theme toggle (dark/light mode)
 - [ ] User authentication modal
 - [ ] Text scramble effects
@@ -269,6 +300,7 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 ## 🔍 Debugging Tips
 
 ### Check if API is being called:
+
 1. Open DevTools → Network tab
 2. Filter by XHR/Fetch
 3. Reload page
@@ -276,12 +308,14 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 5. Verify status is 200
 
 ### Check API response data:
+
 1. Click the `/api/products` request
 2. Go to Response tab
 3. Verify JSON is valid
 4. Check products have required fields
 
 ### Check console for errors:
+
 ```javascript
 // If API fails, you'll see:
 // ❌ "Could not load from API: ..."
@@ -293,6 +327,7 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 ```
 
 ### Verify subdomain detection:
+
 ```javascript
 // In DevTools console, run:
 console.log(API_CONFIG.getBaseURL());
@@ -304,11 +339,11 @@ console.log(window.location.protocol);
 
 ## 📊 Product Categories Count
 
-| Category | Count | IDs |
-|----------|-------|-----|
-| phones | 5 | s25u, i16pm, i15, ga55, + cbar |
-| laptops | 5 | mbpm4, ippm4, dxps16, am18r2, + sb4 |
-| accessories | 5 | aw10, gb3p, cgar, ps6, + extra |
+| Category    | Count | IDs                                 |
+| ----------- | ----- | ----------------------------------- |
+| phones      | 5     | s25u, i16pm, i15, ga55, + cbar      |
+| laptops     | 5     | mbpm4, ippm4, dxps16, am18r2, + sb4 |
+| accessories | 5     | aw10, gb3p, cgar, ps6, + extra      |
 
 ---
 
@@ -326,9 +361,11 @@ console.log(window.location.protocol);
 ## 🚨 Common Issues & Fixes
 
 ### Issue: Products not loading
+
 **Symptom:** "Loaded 0 products" or blank grid
 
 **Fixes:**
+
 1. Check backend is running: `curl http://localhost:5000/api/products`
 2. Verify products.json is valid JSON
 3. Check Network tab for API errors
@@ -337,9 +374,11 @@ console.log(window.location.protocol);
 ---
 
 ### Issue: CORS errors
+
 **Symptom:** "Access to XMLHttpRequest blocked by CORS"
 
 **Fixes:**
+
 1. Verify backend CORS config includes your domain
 2. Restart backend after config changes
 3. Clear browser cache
@@ -348,9 +387,11 @@ console.log(window.location.protocol);
 ---
 
 ### Issue: Products load but filters don't work
+
 **Symptom:** Filter buttons don't show/hide products
 
 **Fixes:**
+
 1. Check products have `category` field
 2. Verify filter names match categories: phones, laptops, accessories
 3. Open console - check for errors
@@ -359,9 +400,11 @@ console.log(window.location.protocol);
 ---
 
 ### Issue: Wrong API URL detected
+
 **Symptom:** API_CONFIG returns unexpected URL
 
 **Fixes:**
+
 1. Check `window.location.hostname` in console
 2. Verify subdomain detection logic
 3. Update corsOptions in server.js if needed

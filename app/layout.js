@@ -1,21 +1,88 @@
 import './globals.css';
+import './elite.css';
+import { headers } from 'next/headers';
+import { StoreProvider } from '@/components/StoreProvider';
+import CartDrawer from '@/components/CartDrawer';
+import QuickView from '@/components/QuickView';
+
+const SITE_URL = 'https://daniel-gadgets.vercel.app';
 
 export const metadata = {
-  metadataBase: new URL('https://daniel-gadgets.vercel.app'),
-  title: 'Daniel Gadgets | Premium Technology & Accessories',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Daniel Gadgets | Premium Technology & Accessories',
+    template: '%s | Daniel Gadgets',
+  },
   description:
-    'Premium gadgets and smartphones at Daniel Gadgets. Official products with warranty.',
+    'Premium gadgets, smartphones, laptops and accessories at Daniel Gadgets. 100% authentic products with official warranty and fast delivery across Nigeria.',
+  keywords: [
+    'Daniel Gadgets',
+    'buy iPhone Nigeria',
+    'Samsung Galaxy Nigeria',
+    'premium gadgets',
+    'authentic smartphones',
+    'laptops',
+    'accessories',
+  ],
+  applicationName: 'Daniel Gadgets',
+  authors: [{ name: 'Daniel Gadgets' }],
+  alternates: { canonical: '/' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'Daniel Gadgets',
+    title: 'Daniel Gadgets | Premium Technology & Accessories',
+    description:
+      'Authentic smartphones, laptops and accessories with official warranty and fast delivery.',
+    url: SITE_URL,
+    locale: 'en_NG',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Daniel Gadgets | Premium Technology & Accessories',
+    description:
+      'Authentic smartphones, laptops and accessories with official warranty and fast delivery.',
+  },
 };
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#020205',
 };
 
 // Set the theme before first paint to avoid a flash of the wrong theme.
 const themeScript = `(function(){try{var t=localStorage.getItem('dg_theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`;
 
-export default function RootLayout({ children }) {
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Daniel Gadgets',
+  url: SITE_URL,
+  description:
+    'Premium gadgets, smartphones, laptops and accessories with official warranty and fast delivery across Nigeria.',
+  sameAs: [
+    'https://www.tiktok.com/@danielclothings_',
+    'https://t.me/DanielClothings000',
+    'https://wa.me/2349132715125',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: '+2349132715125',
+    areaServed: 'NG',
+    availableLanguage: 'English',
+  },
+};
+
+export default async function RootLayout({ children }) {
+  // Nonce minted per-request by middleware.ts; required by the strict CSP.
+  const nonce = (await headers()).get('x-nonce') ?? undefined;
+
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
@@ -25,9 +92,30 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Orbitron:wght@400;500;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {/* suppressHydrationWarning: browsers hide the CSP nonce from the DOM
+            after load, so the client sees nonce="" — this is expected, not a bug. */}
+        <script
+          nonce={nonce}
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+        />
+        <script
+          type="application/ld+json"
+          nonce={nonce}
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+        />
       </head>
-      <body>{children}</body>
+      <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <StoreProvider>
+          {children}
+          <CartDrawer />
+          <QuickView />
+        </StoreProvider>
+      </body>
     </html>
   );
 }

@@ -57,8 +57,7 @@ export default function Reviews() {
   // Carousel controller — rebuilt whenever the review set changes.
   useEffect(() => {
     if (!reviews.length) return;
-    const getSPV = () =>
-      window.innerWidth <= 580 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+    const getSPV = () => (window.innerWidth <= 580 ? 1 : window.innerWidth <= 900 ? 2 : 3);
 
     let spv = getSPV();
     let max = Math.max(0, reviews.length - spv);
@@ -153,11 +152,7 @@ export default function Reviews() {
               ></button>
             ))}
           </div>
-          <button
-            className="cbtn"
-            aria-label="Next review"
-            onClick={() => apiRef.current.next()}
-          >
+          <button className="cbtn" aria-label="Next review" onClick={() => apiRef.current.next()}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M9 18l6-6-6-6" />
             </svg>

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useStore } from './StoreProvider';
+import { useFocusTrap } from '@/lib/focus-trap';
 
 /* ============================================================
    Site chrome: top nav, slide-out side menu, auth modal and
@@ -14,6 +16,8 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
   const [authMode, setAuthMode] = useState('login'); // 'login' | 'register'
   const [userInitial, setUserInitial] = useState('');
   const [theme, setTheme] = useState('dark');
+  const { hydrated, cartCount, wishlistCount, openDrawer } = useStore();
+  const authModalRef = useFocusTrap(authOpen);
 
   // Restore saved user + theme on mount.
   useEffect(() => {
@@ -81,6 +85,50 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
           Daniel<em>Gadgets</em>
         </Link>
         <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: 15 }}>
+          <button
+            className="nav-icon"
+            aria-label={`Wishlist${hydrated && wishlistCount ? `, ${wishlistCount} items` : ''}`}
+            style={{ color: 'var(--txt)' }}
+            onClick={() => openDrawer('wishlist')}
+          >
+            <svg
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            {hydrated && wishlistCount > 0 && <span className="nav-badge">{wishlistCount}</span>}
+          </button>
+          <button
+            className="nav-icon"
+            aria-label={`Cart${hydrated && cartCount ? `, ${cartCount} items` : ''}`}
+            style={{ color: 'var(--txt)' }}
+            onClick={() => openDrawer('cart')}
+          >
+            <svg
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            {hydrated && cartCount > 0 && <span className="nav-badge">{cartCount}</span>}
+          </button>
           <button
             className="nav-icon"
             aria-label="Account"
@@ -159,7 +207,14 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
           if (e.target === e.currentTarget) setAuthOpen(false);
         }}
       >
-        <div className="auth-modal">
+        <div
+          className="auth-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Account access"
+          ref={authModalRef}
+          tabIndex={-1}
+        >
           <button className="auth-close" onClick={() => setAuthOpen(false)}>
             &times;
           </button>

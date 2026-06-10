@@ -23,7 +23,7 @@ export default function ProductsPage() {
     <>
       <Chrome menuLinks={MENU_LINKS} />
 
-      <main className="sec products" id="products">
+      <main className="sec products" id="main-content">
         <div className="hud-corner hud-tl"></div>
         <div className="hud-corner hud-tr"></div>
         <div className="hud-corner hud-bl"></div>
@@ -40,7 +40,7 @@ export default function ProductsPage() {
           </Link>
         </div>
 
-        <Products withLoadingPlaceholder />
+        <Products />
       </main>
 
       <Footer full={false} />
