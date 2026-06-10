@@ -1,79 +1,45 @@
 [
   {
-    "id": "s25u",
-    "brand": "Samsung Galaxy",
-    "category": "phones",
-    "name": "Galaxy S25 Ultra",
-    "description": "Titanium build, 200MP camera system, built-in S-Pen, Galaxy AI.",
-    "price": 1110000,
-    "stock": true,
-    "specs": {
-      "Processor": "SD 8 Gen 4",
-      "Display": "6.8\" AMOLED 2X",
-      "Camera": "200MP Quad",
-      "Battery": "5000mAh"
-    },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
-  },
-  {
     "id": "i16pm",
     "brand": "Apple iPhone",
     "category": "phones",
-    "name": "iPhone 16 Pro Max",
-    "description": "A18 Pro chip, 64MP Fusion Camera, Action Button, titanium design.",
-    "price": 1200000,
+    "name": "iPhone 16 Pro Max 256GB",
+    "description": "A18 Pro chip, 48MP Fusion camera, Camera Control button and titanium design.",
+    "price": 2500000,
     "stock": true,
     "specs": {
       "Chipset": "A18 Pro Bionic",
       "Display": "6.9\" ProMotion",
-      "Storage": "256GB - 1TB",
-      "Video": "4K 120fps ProRes"
+      "Storage": "256GB",
+      "Camera": "48MP Fusion"
     },
     "image": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&q=80&w=500",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
-    "id": "aw10",
-    "brand": "Apple Watch",
-    "category": "accessories",
-    "name": "Apple Watch Series 10",
-    "description": "Thinnest Apple Watch ever, advanced health monitoring, 18 hr battery.",
-    "price": 350000,
+    "id": "i16",
+    "brand": "Apple iPhone",
+    "category": "phones",
+    "name": "iPhone 16 128GB",
+    "description": "A18 chip, 48MP main camera, Action Button and the new Camera Control.",
+    "price": 1850000,
     "stock": true,
     "specs": {
-      "Sensor": "Blood Oxygen",
-      "Display": "OLED Always-On",
-      "Rating": "WR50 Water Res.",
-      "Battery": "18-36 Hours"
+      "Chipset": "A18 Bionic",
+      "Display": "6.1\" Super Retina XDR",
+      "Storage": "128GB",
+      "Camera": "48MP Dual"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
-  },
-  {
-    "id": "gb3p",
-    "brand": "Samsung Galaxy",
-    "category": "accessories",
-    "name": "Galaxy Buds 3 Pro",
-    "description": "Intelligent ANC, 3-way speaker system, 360° audio, 30 hr total battery.",
-    "price": 98000,
-    "stock": true,
-    "specs": {
-      "Audio": "Hi-Fi 24-bit",
-      "ANC": "Intelligent",
-      "Connectivity": "BT 5.4",
-      "Battery": "30hrs w/ Case"
-    },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
+    "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
     "id": "i15",
     "brand": "Apple iPhone",
     "category": "phones",
-    "name": "iPhone 15",
-    "description": "48MP main camera, Dynamic Island, USB-C, A16 Bionic chip.",
-    "price": 850000,
+    "name": "iPhone 15 128GB",
+    "description": "48MP main camera, Dynamic Island, USB-C and the A16 Bionic chip.",
+    "price": 1550000,
     "stock": true,
     "specs": {
       "Chip": "A16 Bionic",
@@ -85,122 +51,326 @@
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
-    "id": "ga55",
+    "id": "s24fe",
     "brand": "Samsung Galaxy",
     "category": "phones",
-    "name": "Galaxy A55",
-    "description": "50MP OIS camera, Exynos 1480, IP67 water resistance, Super AMOLED.",
-    "price": 320000,
+    "name": "Galaxy S24 FE 256GB",
+    "description": "Flagship Fan Edition with Galaxy AI, 50MP camera and Exynos 2400e power.",
+    "price": 1115000,
     "stock": true,
     "specs": {
-      "Processor": "Exynos 1480",
-      "Display": "120Hz AMOLED",
-      "Protection": "IP67 Rated",
-      "Battery": "5000mAh"
+      "Processor": "Exynos 2400e",
+      "Display": "6.7\" AMOLED 2X",
+      "Storage": "8GB / 256GB",
+      "Camera": "50MP Triple"
     },
-    "image": "https://images.unsplash.com/photo-1610945415295-d9baf060e871?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
+  },
+  {
+    "id": "zfold6",
+    "brand": "Samsung Galaxy",
+    "category": "phones",
+    "name": "Galaxy Z Fold 6 256GB",
+    "description": "Foldable powerhouse with a 7.6\" main display, Galaxy AI and S-Pen support.",
+    "price": 3005000,
+    "stock": true,
+    "specs": {
+      "Processor": "SD 8 Gen 3",
+      "Main Display": "7.6\" AMOLED 2X",
+      "Storage": "12GB / 256GB",
+      "Battery": "4400mAh"
+    },
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
+  },
+  {
+    "id": "pvflip2",
+    "brand": "Tecno",
+    "category": "phones",
+    "name": "Phantom V Flip 2 5G 256GB",
+    "description": "Compact 5G flip phone with a vivid cover screen and 8GB RAM.",
+    "price": 1060000,
+    "stock": true,
+    "specs": {
+      "Network": "5G",
+      "Memory": "8GB / 256GB",
+      "Display": "6.9\" AMOLED Fold",
+      "Camera": "64MP Dual"
+    },
+    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
-    "id": "mbpm4",
-    "brand": "Apple",
-    "category": "laptops",
-    "name": "MacBook Pro M4",
-    "description": "The world's most advanced laptop for workflows that demand extreme performance.",
-    "price": 2450000,
+    "id": "note40pro",
+    "brand": "Infinix",
+    "category": "phones",
+    "name": "Note 40 Pro 256GB",
+    "description": "108MP camera, 8GB RAM and 45W all-round fast charging on Android 14.",
+    "price": 405500,
+    "stock": true,
+    "specs": {
+      "OS": "Android 14",
+      "Memory": "8GB / 256GB",
+      "Display": "120Hz AMOLED",
+      "Camera": "108MP Triple"
+    },
+    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
+  },
+  {
+    "id": "spark30pro",
+    "brand": "Tecno",
+    "category": "phones",
+    "name": "Spark 30 Pro 256GB",
+    "description": "Big 8GB RAM, 256GB storage and a smooth 120Hz display for everyday use.",
+    "price": 285100,
+    "stock": true,
+    "specs": {
+      "Memory": "8GB / 256GB",
+      "Display": "120Hz",
+      "Camera": "50MP Main",
+      "Battery": "5000mAh"
+    },
+    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
+  },
+  {
+    "id": "redmi13",
+    "brand": "Xiaomi",
+    "category": "phones",
+    "name": "Redmi 13 8GB 256GB",
+    "description": "108MP camera, large 8GB RAM and a crisp FHD+ display at a great price.",
+    "price": 250600,
+    "stock": true,
+    "specs": {
+      "Memory": "8GB / 256GB",
+      "Display": "FHD+ 90Hz",
+      "Camera": "108MP Dual",
+      "Battery": "5030mAh"
+    },
+    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
+  },
+  {
+    "id": "a06",
+    "brand": "Samsung Galaxy",
+    "category": "phones",
+    "name": "Galaxy A06 4GB 128GB",
+    "description": "Affordable everyday Samsung with a 50MP camera and 5000mAh battery.",
+    "price": 156500,
     "stock": false,
     "specs": {
-      "Processor": "Apple M4 Max",
-      "Display": "14\" Liquid Retina",
-      "Memory": "36GB - 128GB",
-      "Battery": "Up to 22 Hours"
+      "Memory": "4GB / 128GB",
+      "Display": "6.7\" HD+",
+      "Camera": "50MP Dual",
+      "Battery": "5000mAh"
     },
-    "image": "https://images.unsplash.com/photo-1517336714460-4c5049c6146c?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(150,155,180,.12),rgba(80,85,110,.18))"
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
-    "id": "ippm4",
-    "brand": "Apple",
+    "id": "flex5",
+    "brand": "Lenovo",
     "category": "laptops",
-    "name": "iPad Pro 13\" (M4)",
-    "description": "Unbelievable performance and the world's most advanced display.",
-    "price": 1550000,
-    "stock": true,
+    "name": "Ideapad Flex 5 14\"",
+    "description": "Versatile 2-in-1 convertible with 8GB RAM and a fast 512GB SSD.",
+    "price": 770000,
+    "stock": false,
     "specs": {
-      "Display": "Ultra Retina XDR",
-      "Chip": "Apple M4",
-      "Design": "5.1mm Ultra Thin",
-      "Input": "Pencil Pro Support"
-    },
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(188,0,255,.1),rgba(60,0,100,.2))"
-  },
-  {
-    "id": "cgar",
-    "brand": "Samsung",
-    "category": "accessories",
-    "name": "Cyber Glass AR",
-    "description": "Next-gen smart eyeglasses with integrated AR display and AI vision.",
-    "price": 420000,
-    "stock": true,
-    "specs": {
-      "Visuals": "HUD AR Overlay",
-      "Camera": "12MP Ultra-wide",
-      "AI": "Voice Controlled",
-      "Audio": "Open-ear Spatial"
-    },
-    "image": "https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(0,242,255,.1),rgba(0,80,120,.2))"
-  },
-  {
-    "id": "dxps16",
-    "brand": "Dell",
-    "category": "laptops",
-    "name": "Dell XPS 16 (2026)",
-    "description": "The iconic seamless design powered by the latest Intel Core Ultra processors.",
-    "price": 2150000,
-    "stock": true,
-    "specs": {
-      "Processor": "Core Ultra 9 185H",
-      "Graphics": "RTX 4070 8GB",
-      "Display": "4K OLED Touch",
-      "Design": "Seamless Glass"
+      "Memory": "8GB RAM",
+      "Storage": "512GB SSD",
+      "Display": "14\" Touch",
+      "Form": "2-in-1 Convertible"
     },
     "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
     "gradient": "linear-gradient(135deg,rgba(200,200,200,.1),rgba(80,80,80,.15))"
   },
   {
-    "id": "am18r2",
-    "brand": "Alienware",
+    "id": "lat7389",
+    "brand": "Dell",
     "category": "laptops",
-    "name": "Alienware m18 R2",
-    "description": "Maximum performance with an 18-inch display and elite Alienware Cryo-tech.",
-    "price": 3850000,
-    "stock": true,
+    "name": "Latitude 7389 2-in-1",
+    "description": "13.3\" business convertible, Core i7, 16GB RAM and a 256GB SSD on Win 10 Pro.",
+    "price": 437000,
+    "stock": false,
     "specs": {
-      "Processor": "i9-14900HX",
-      "Graphics": "RTX 4090 16GB",
-      "Refresh": "480Hz QHD+",
-      "Cooling": "Cryo-Tech Liquid"
+      "Processor": "Intel Core i7",
+      "Memory": "16GB RAM",
+      "Storage": "256GB SSD",
+      "Display": "13.3\" Touch"
     },
-    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=500",
-    "gradient": "linear-gradient(135deg,rgba(188,0,255,.15),rgba(50,0,100,.2))"
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(150,155,180,.12),rgba(80,85,110,.18))"
   },
   {
-    "id": "ps6",
-    "brand": "PlayStation",
+    "id": "watchultra",
+    "brand": "Samsung Galaxy",
     "category": "accessories",
-    "name": "PlayStation 6",
-    "description": "The future of immersive gaming with 16K visuals and advanced neural feedback.",
-    "price": 950000,
+    "name": "Galaxy Watch Ultra LTE 47mm",
+    "description": "Rugged titanium smartwatch with LTE, advanced health and 100m water resistance.",
+    "price": 861000,
     "stock": true,
     "specs": {
-      "Resolution": "Native 16K HDR",
-      "Graphics": "Ray Tracing Gen 3",
-      "Storage": "4TB Quantum SSD",
-      "Feature": "Neural Haptic Link"
+      "Case": "47mm Titanium",
+      "Connectivity": "LTE + BT",
+      "Rating": "10ATM / IP68",
+      "Health": "BioActive Sensor"
+    },
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
+  },
+  {
+    "id": "watch7",
+    "brand": "Samsung Galaxy",
+    "category": "accessories",
+    "name": "Galaxy Watch7 44mm",
+    "description": "Bluetooth smartwatch with advanced BioActive sensors, sleep tracking and Wear OS.",
+    "price": 436000,
+    "stock": true,
+    "specs": {
+      "Case": "44mm",
+      "Connectivity": "Bluetooth",
+      "Health": "BioActive Sensor",
+      "OS": "Wear OS"
+    },
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
+  },
+  {
+    "id": "awultra2",
+    "brand": "Apple Watch",
+    "category": "accessories",
+    "name": "Apple Watch Ultra 2 49mm",
+    "description": "Rugged titanium case, brightest Apple display ever, precision dual-frequency GPS.",
+    "price": 1950000,
+    "stock": true,
+    "specs": {
+      "Case": "49mm Titanium",
+      "Chip": "S9 SiP",
+      "Battery": "Up to 36 Hours",
+      "Rating": "WR100 / EN13319"
+    },
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
+  },
+  {
+    "id": "tecnowatch1",
+    "brand": "Tecno",
+    "category": "accessories",
+    "name": "Tecno Watch 1",
+    "description": "Affordable fitness smartwatch with heart-rate monitoring and multiple sport modes.",
+    "price": 15000,
+    "stock": true,
+    "specs": {
+      "Display": "Full Touch",
+      "Health": "Heart Rate",
+      "Modes": "Multi-Sport",
+      "Battery": "Long Life"
+    },
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
+  },
+  {
+    "id": "airpodspro2",
+    "brand": "Apple",
+    "category": "audio",
+    "name": "AirPods Pro (2nd Gen)",
+    "description": "Adaptive Audio, 2x stronger Active Noise Cancellation and USB-C charging.",
+    "price": 355000,
+    "stock": true,
+    "specs": {
+      "Chip": "Apple H2",
+      "ANC": "Active + Adaptive",
+      "Case": "USB-C MagSafe",
+      "Battery": "30hrs w/ Case"
+    },
+    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
+  },
+  {
+    "id": "wh1000xm5",
+    "brand": "Sony",
+    "category": "audio",
+    "name": "WH-1000XM5 Headphones",
+    "description": "Industry-leading noise cancellation with crystal-clear hands-free calling.",
+    "price": 490000,
+    "stock": true,
+    "specs": {
+      "Type": "Over-ear Wireless",
+      "ANC": "Dual Processor",
+      "Battery": "30 Hours",
+      "Connectivity": "BT 5.2"
+    },
+    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
+  },
+  {
+    "id": "buds3pro",
+    "brand": "Samsung Galaxy",
+    "category": "audio",
+    "name": "Galaxy Buds 3 Pro",
+    "description": "Intelligent ANC, blade-style design and 360° spatial audio.",
+    "price": 283000,
+    "stock": true,
+    "specs": {
+      "Audio": "Hi-Fi 24-bit",
+      "ANC": "Intelligent",
+      "Connectivity": "BT 5.4",
+      "Battery": "30hrs w/ Case"
+    },
+    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
+  },
+  {
+    "id": "taba9",
+    "brand": "Samsung Galaxy",
+    "category": "tablets",
+    "name": "Galaxy Tab A9 LTE 64GB",
+    "description": "Compact 8.7\" tablet with LTE, 4GB RAM and dual speakers for media on the go.",
+    "price": 291000,
+    "stock": true,
+    "specs": {
+      "Display": "8.7\" WXGA+",
+      "Memory": "4GB / 64GB",
+      "Network": "LTE + WiFi",
+      "Battery": "5100mAh"
+    },
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(188,0,255,.1),rgba(60,0,100,.2))"
+  },
+  {
+    "id": "ps5slim",
+    "brand": "PlayStation",
+    "category": "gaming",
+    "name": "PlayStation 5 Slim 1TB",
+    "description": "Slimmer PS5 with a 1TB SSD, lightning-fast loading and 4K gaming.",
+    "price": 800000,
+    "stock": true,
+    "specs": {
+      "Storage": "1TB SSD",
+      "Resolution": "Up to 4K 120Hz",
+      "Edition": "Disc Edition",
+      "Feature": "DualSense Haptics"
     },
     "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
     "gradient": "linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,242,255,.1))"
+  },
+  {
+    "id": "quest3",
+    "brand": "Meta",
+    "category": "gaming",
+    "name": "Meta Quest 3 128GB",
+    "description": "Breakthrough mixed-reality headset with full-colour passthrough and crisp visuals.",
+    "price": 900000,
+    "stock": true,
+    "specs": {
+      "Storage": "128GB",
+      "Display": "4K+ Infinite",
+      "Chipset": "Snapdragon XR2 Gen 2",
+      "Feature": "Colour Passthrough"
+    },
+    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
+    "gradient": "linear-gradient(135deg,rgba(0,242,255,.1),rgba(0,80,120,.2))"
   }
 ]
