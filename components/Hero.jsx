@@ -213,7 +213,7 @@ export default function Hero() {
         <p className="hero-sub">Where Innovation Meets Authentic Craftsmanship.</p>
         <p className="hero-p">
           Experience the next generation of smartphones and premium accessories from the world&apos;s
-          most trusted brands.
+          most trusted brands...
         </p>
 
         <div className="hero-btns">
