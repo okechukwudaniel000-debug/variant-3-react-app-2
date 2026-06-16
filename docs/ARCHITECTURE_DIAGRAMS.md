@@ -8,7 +8,7 @@
 │                          END USER'S BROWSER                                 │
 │                                                                             │
 │  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │                    gadgets.html (Frontend)                            │ │
+│  │                    ../legacy/gadgets.html (Frontend)                  │ │
 │  │                                                                       │ │
 │  │  ┌─────────────────────────────────────────────────────────────┐    │ │
 │  │  │ 1. Page Loads                                               │    │ │
@@ -92,7 +92,7 @@
                               │                             │
                        ┌──────▼──────┐            ┌────────▼────────┐
                        │  Node.js    │            │  Port 5000      │
-                       │  Express    │            │  (Server)       │
+                       │  Express    │            │  (../fullstack/backend/server.js)       │
                        │  Server     │            │                 │
                        └──────┬──────┘            └─────────────────┘
                               │
@@ -109,7 +109,7 @@
                                     ┌──────▼────────┐
                                     │ Data Layer    │
                                     │               │
-                                    │ products.json │
+                                    │ ../fullstack/backend/data/products.json │
                                     │ reviews.json  │
                                     │               │
                                     └───────────────┘

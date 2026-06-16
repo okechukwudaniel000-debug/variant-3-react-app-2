@@ -4,7 +4,7 @@
 
 ### 1. **gadgets.html** (Frontend)
 
-**Location:** `c:/Users/HomePC/Desktop/gadgets_webite/variant 3/gadgets.html`
+**Location:** `../legacy/gadgets.html`
 
 **Changes:**
 
@@ -26,7 +26,7 @@
 
 ### 2. **server.js** (Backend)
 
-**Location:** `c:/Users/HomePC/Desktop/gadgets_webite/variant 3/fullstack/backend/server.js`
+**Location:** `../fullstack/backend/server.js`
 
 **Changes:**
 
@@ -45,7 +45,7 @@
 
 ### 3. **products.json** (Data)
 
-**Location:** `c:/Users/HomePC/Desktop/gadgets_webite/variant 3/fullstack/backend/data/products.json`
+**Location:** `../fullstack/backend/data/products.json`
 
 **Changes:**
 
@@ -76,7 +76,7 @@
 
 ### 1. **README.md**
 
-**Location:** `c:/Users/HomePC/Desktop/gadgets_webite/variant 3/README.md`
+**Location:** `../README.md`
 
 **Content:**
 

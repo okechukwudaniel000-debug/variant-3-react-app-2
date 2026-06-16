@@ -28,6 +28,7 @@ export interface RateLimitResult {
  * @param windowMs window length in milliseconds
  */
 export function rateLimit(key: string, limit = 5, windowMs = 60_000): RateLimitResult {
+  pruneBuckets();
   const now = Date.now();
   const existing = buckets.get(key);
 

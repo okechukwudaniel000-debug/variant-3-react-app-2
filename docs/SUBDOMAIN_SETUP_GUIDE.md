@@ -8,7 +8,7 @@ The gadgets website has been improved to support subdomain-based API routing. Pr
 
 ## Architecture
 
-### Frontend (gadgets.html)
+### Frontend (../legacy/gadgets.html)
 
 **Subdomain Detection Logic:**
 
@@ -23,7 +23,7 @@ API_CONFIG.getBaseURL(); // Returns correct API base URL
 API_CONFIG.getProductsURL(); // Returns /api/products endpoint
 ```
 
-### Backend (server.js)
+### Backend (../fullstack/backend/server.js)
 
 **CORS Support:**
 
@@ -38,7 +38,7 @@ API_CONFIG.getProductsURL(); // Returns /api/products endpoint
 - `GET /api/reviews` - Get reviews (existing)
 - `POST /api/contact` - Contact form (existing)
 
-### Data Format (products.json)
+### Data Format (../data/products.json)
 
 Each product now has:
 

@@ -4,7 +4,7 @@
 
 ### Scenario 1: Local Development (File Protocol)
 
-**URL:** `file:///path/to/gadgets.html`
+**URL:** `../legacy/gadgets.html` (Local file path)
 
 **Expected Behavior:**
 
@@ -15,7 +15,7 @@
 
 **Test Steps:**
 
-1. Open gadgets.html directly in browser
+1. Open `../legacy/gadgets.html` directly in browser
 2. Verify products display
 3. Click "Phones" filter - should show only phones
 4. Click "All" to reset
@@ -367,7 +367,7 @@ console.log(window.location.protocol);
 **Fixes:**
 
 1. Check backend is running: `curl http://localhost:5000/api/products`
-2. Verify products.json is valid JSON
+2. Verify `../data/products.json` is valid JSON
 3. Check Network tab for API errors
 4. Check console for error messages
 
@@ -407,7 +407,7 @@ console.log(window.location.protocol);
 
 1. Check `window.location.hostname` in console
 2. Verify subdomain detection logic
-3. Update corsOptions in server.js if needed
+3. Update corsOptions in `../fullstack/backend/server.js` if needed
 4. Restart backend
 
 ---

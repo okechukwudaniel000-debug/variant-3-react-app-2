@@ -4,7 +4,7 @@
 
 ### 🎯 Getting Started
 
-1. **[README.md](README.md)** ← **START HERE**
+1. **[../README.md](../README.md)** ← **START HERE**
    - Project overview
    - Quick start (5 minutes)
    - Quick testing
@@ -59,7 +59,7 @@
 
 ### "I want to get it running locally"
 
-→ Read: **README.md** → Quick Start section (5 min)
+→ Read: **../README.md** → Quick Start section (5 min)
 → Follow: Backend startup commands
 
 ### "I want to test everything"
@@ -88,18 +88,18 @@
 
 ### Getting Started
 
-- README.md → Quick Start
+- ../README.md → Quick Start
 - TESTING_GUIDE.md → Scenario 1-2
 
 ### Local Development
 
-- README.md → Local Development
+- ../README.md → Local Development
 - TESTING_GUIDE.md → Scenario 1-2
 - SUBDOMAIN_SETUP_GUIDE.md → Local Development Setup
 
 ### API Usage
 
-- README.md → API Reference
+- ../README.md → API Reference
 - TESTING_GUIDE.md → API Testing
 - SUBDOMAIN_SETUP_GUIDE.md → API Reference
 
@@ -111,7 +111,7 @@
 
 ### Troubleshooting
 
-- README.md → Troubleshooting
+- ../README.md → Troubleshooting
 - TESTING_GUIDE.md → Common Issues
 - SUBDOMAIN_SETUP_GUIDE.md → Troubleshooting
 
@@ -127,14 +127,14 @@
 
 ### For Developers (Implementation)
 
-1. README.md (10 min)
+1. ../README.md (10 min)
 2. IMPLEMENTATION_SUMMARY.md (15 min)
 3. ARCHITECTURE_DIAGRAMS.md (15 min)
-4. Code comments in gadgets.html & server.js (15 min)
+4. Code comments in ../legacy/gadgets.html & server.js (15 min)
 
 ### For Testers (QA)
 
-1. README.md (10 min)
+1. ../README.md (10 min)
 2. TESTING_GUIDE.md (30 min)
 3. VERIFICATION_REPORT.md (10 min)
 
@@ -146,7 +146,7 @@
 
 ### For Project Managers
 
-1. README.md (10 min)
+1. ../README.md (10 min)
 2. IMPLEMENTATION_SUMMARY.md (15 min)
 3. VERIFICATION_REPORT.md (10 min)
 
@@ -156,11 +156,11 @@
 
 ### Modified Files (3)
 
-1. **gadgets.html**
+1. **../legacy/gadgets.html**
    - Added API_CONFIG object
    - Added product loading functions
    - Updated DOMContentLoaded
-   - See: README.md, IMPLEMENTATION_SUMMARY.md
+   - See: ../README.md, IMPLEMENTATION_SUMMARY.md
 
 2. **server.js**
    - Enhanced CORS configuration
@@ -172,11 +172,11 @@
    - Restructured all products
    - New data schema
    - 10 products updated
-   - See: README.md, Data Structure section
+   - See: ../README.md, Data Structure section
 
 ### Created Files (7)
 
-1. README.md - Project overview
+1. ../README.md - Project overview
 2. TESTING_GUIDE.md - Testing procedures
 3. IMPLEMENTATION_SUMMARY.md - Changes overview
 4. IMPLEMENTATION_CHECKLIST.md - File listing
@@ -188,7 +188,7 @@
 
 ## 🔍 Key Sections by Document
 
-### README.md
+### ../README.md
 
 - Overview (what/why/how)
 - Quick Start (5 minutes)
@@ -251,7 +251,7 @@
 ## 📞 Finding Help
 
 **"How do I run this locally?"**
-→ README.md → Quick Start
+→ ../README.md → Quick Start
 
 **"How do I test it?"**
 → TESTING_GUIDE.md → Scenario 1-2
@@ -277,15 +277,15 @@
 
 ### 1. Understand (30 minutes)
 
-- [ ] Read README.md (overview)
+- [ ] Read ../README.md (overview)
 - [ ] Read IMPLEMENTATION_SUMMARY.md (changes)
 - [ ] View ARCHITECTURE_DIAGRAMS.md (system)
 
 ### 2. Setup (15 minutes)
 
-- [ ] Follow README.md Quick Start
+- [ ] Follow ../README.md Quick Start
 - [ ] Start backend server
-- [ ] Open gadgets.html in browser
+- [ ] Open ../legacy/gadgets.html in browser
 
 ### 3. Test (30 minutes)
 
@@ -313,7 +313,7 @@
 
 | Document                    | Length           | Topic        | Audience   |
 | --------------------------- | ---------------- | ------------ | ---------- |
-| README.md                   | 500 lines        | Overview     | Everyone   |
+| ../README.md                | 500 lines        | Overview     | Everyone   |
 | TESTING_GUIDE.md            | 400 lines        | Testing      | Testers    |
 | IMPLEMENTATION_SUMMARY.md   | 300 lines        | Changes      | Developers |
 | IMPLEMENTATION_CHECKLIST.md | 400 lines        | Details      | Developers |
@@ -326,10 +326,10 @@
 
 ## ✅ Documentation Completeness
 
-- [x] Project overview (README.md)
-- [x] Quick start guide (README.md)
-- [x] API documentation (README.md + GUIDE)
-- [x] Data structure documentation (README.md)
+- [x] Project overview (../README.md)
+- [x] Quick start guide (../README.md)
+- [x] API documentation (../README.md + GUIDE)
+- [x] Data structure documentation (../README.md)
 - [x] Deployment guide (SUBDOMAIN_SETUP_GUIDE.md)
 - [x] Testing guide (TESTING_GUIDE.md)
 - [x] Architecture documentation (ARCHITECTURE_DIAGRAMS.md)
@@ -346,7 +346,7 @@
 **Choose your path:**
 
 1. **Just want to run it?**
-   → Open README.md → Quick Start section
+   → Open ../README.md → Quick Start section
 
 2. **Want to test thoroughly?**
    → Open TESTING_GUIDE.md → Follow scenarios
@@ -366,7 +366,7 @@
 
 | Document                    | Status      | Last Updated |
 | --------------------------- | ----------- | ------------ |
-| README.md                   | ✅ Complete | 2026-06-09   |
+| ../README.md                | ✅ Complete | 2026-06-09   |
 | TESTING_GUIDE.md            | ✅ Complete | 2026-06-09   |
 | IMPLEMENTATION_SUMMARY.md   | ✅ Complete | 2026-06-09   |
 | IMPLEMENTATION_CHECKLIST.md | ✅ Complete | 2026-06-09   |

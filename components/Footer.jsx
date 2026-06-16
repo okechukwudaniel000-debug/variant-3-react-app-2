@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useStore } from './StoreProvider';
 
 const SHOP_LINKS = [
   { href: '/products', label: 'All Products' },
@@ -46,6 +47,7 @@ export default function Footer({ full = true }) {
   const [email, setEmail] = useState('');
   const [msg, setMsg] = useState({ text: '', ok: false });
   const [busy, setBusy] = useState(false);
+  const { user, logout } = useStore();
 
   async function subscribe(e) {
     e.preventDefault();
@@ -116,6 +118,13 @@ export default function Footer({ full = true }) {
                 {l.label}
               </Link>
             ))}
+            {user ? (
+              <button onClick={() => window.confirm('Logout?') && logout()} className="ft-link-btn" style={{ background: 'none', border: 'none', color: 'inherit', padding: 0, textAlign: 'left', font: 'inherit', cursor: 'pointer', display: 'block', marginTop: 8 }}>
+                Logout ({user.name})
+              </button>
+            ) : (
+              <Link href="/login" style={{ marginTop: 8 }}>Login</Link>
+            )}
             <h4 style={{ marginTop: 18 }}>Support</h4>
             {SUPPORT_LINKS.map((l) => (
               <Link key={l.label} href={l.href}>

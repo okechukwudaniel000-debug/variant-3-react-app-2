@@ -102,7 +102,7 @@ export default function ProductDetailClient({
           </div>
 
           <div className="pdp-buy">
-            <div className="qty-ctl" aria-label="Quantity">
+            <div className="qty-ctl" role="group" aria-label="Quantity">
               <button
                 aria-label="Decrease quantity"
                 onClick={() => setQty((q) => Math.max(1, q - 1))}

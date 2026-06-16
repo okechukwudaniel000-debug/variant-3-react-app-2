@@ -33,6 +33,7 @@ export default function QuickView() {
   return (
     <div
       className="qv-overlay on"
+      role="presentation"
       onClick={(e) => {
         if (e.target === e.currentTarget) closeQuickView();
       }}

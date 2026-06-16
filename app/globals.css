@@ -82,7 +82,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-dm-sans), sans-serif;
   background: var(--bg);
   color: var(--txt);
   overflow-x: hidden;
@@ -268,7 +268,7 @@ section:hover .hud-corner {
   color: var(--txt2);
   font-size: 0.8rem;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transition: all 0.3s var(--ease);
@@ -461,7 +461,7 @@ img {
   justify-content: center;
   font-weight: 900;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   box-shadow: 0 0 15px rgba(20, 40, 160, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -473,7 +473,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -481,7 +481,7 @@ h4 {
 
 /* Orbitron + Space Grotesk are loaded via <link> in app/layout.js. */
 .label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -565,7 +565,7 @@ h4 {
 }
 
 .nav-brand {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 900;
   font-size: 1.18rem;
   color: var(--txt);
@@ -625,7 +625,7 @@ h4 {
   border-bottom: 1px solid var(--border);
 }
 .menu-brand {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 900;
   font-size: 1.15rem;
   color: var(--txt);
@@ -667,7 +667,7 @@ h4 {
   padding: 13px 15px;
   border-radius: 10px;
   color: var(--txt2);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.25s var(--ease);
@@ -724,7 +724,7 @@ h4 {
   border: 1px solid var(--border);
   background: var(--glass);
   color: var(--txt);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 0.88rem;
   transition: all 1.15s var(--ease);
@@ -848,7 +848,7 @@ h4 {
   border-radius: 100px;
   background: var(--glass2);
   border: 1px solid var(--border2);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -878,7 +878,7 @@ h4 {
 }
 
 .hero-h1 {
-  font-family: 'Orbitron', 'Montserrat', sans-serif;
+  font-family: var(--font-orbitron), var(--font-montserrat), sans-serif;
   font-size: clamp(5rem, 8.8vw, 7rem);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -905,7 +905,7 @@ h4 {
 }
 
 .hero-sub {
-  font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+  font-family: var(--font-space-grotesk), var(--font-montserrat), sans-serif;
   font-size: clamp(0.98rem, 2vw, 1.18rem);
   font-weight: 600;
   color: #9edcff;
@@ -917,7 +917,7 @@ h4 {
 }
 
 .hero-p {
-  font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+  font-family: var(--font-space-grotesk), var(--font-montserrat), sans-serif;
   font-size: 0.98rem;
   color: rgba(220, 232, 255, 0.82);
   max-width: 640px;
@@ -942,7 +942,7 @@ h4 {
   padding: 15px 34px;
   background: var(--accent);
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   border-radius: 10px;
@@ -975,7 +975,7 @@ h4 {
   padding: 15px 34px;
   background: var(--accent3);
   color: #000c1b;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   border-radius: 10px;
@@ -1001,7 +1001,7 @@ h4 {
 }
 .scroll-t {
   font-size: 0.65rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 900;
   color: var(--accent-cyan);
   letter-spacing: 0.25em;
@@ -1060,7 +1060,7 @@ h4 {
   box-shadow: 0 0 50px var(--glow2);
 }
 .tnum {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
   color: var(--accent3);
@@ -1071,7 +1071,7 @@ h4 {
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--txt2);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 /* ============================================================
@@ -1398,11 +1398,11 @@ h4 {
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent3);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   margin-bottom: 5px;
 }
 .pname {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--txt);
@@ -1426,7 +1426,7 @@ h4 {
   margin-bottom: 2px;
 }
 .pprice {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 1.15rem;
   font-weight: 900;
   color: var(--txt);
@@ -1435,7 +1435,7 @@ h4 {
   padding: 10px 12px;
   background: var(--accent);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 0.78rem;
   border-radius: 8px;
@@ -1509,7 +1509,7 @@ h4 {
   color: var(--accent3);
 }
 .ftitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--txt);
@@ -1588,14 +1588,14 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 850;
   font-size: 0.9rem;
   color: #fff;
   flex-shrink: 0;
 }
 .rv-name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 800;
   font-size: 0.98rem;
   color: var(--txt);
@@ -1657,12 +1657,16 @@ h4 {
 .about-inner {
   max-width: 740px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about-txt {
   font-size: 1rem;
   color: var(--txt2);
   line-height: 1.9;
   margin-bottom: 32px;
+  text-align: center;
 }
 .about-line {
   width: 56px;
@@ -1732,7 +1736,7 @@ h4 {
 .clbl {
   display: block;
   font-size: 0.73rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   color: var(--txt3);
   margin-top: 9px;
@@ -1804,7 +1808,7 @@ footer::after {
   justify-items: center;
 }
 .ft-logo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 900;
   font-size: 1.55rem;
   color: var(--txt);
@@ -1833,7 +1837,7 @@ footer::after {
   border-radius: 999px;
   padding: 8px 10px;
   font-size: 0.72rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   box-shadow:
@@ -1875,10 +1879,11 @@ footer::after {
 .ft-copy {
   font-size: 0.65rem;
   color: var(--txt3);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-top: 6px;
+  text-align: center;
 }
 
 /* ============================================================

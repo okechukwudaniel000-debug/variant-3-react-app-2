@@ -1,9 +1,34 @@
 import './globals.css';
 import './elite.css';
 import { headers } from 'next/headers';
+import { Montserrat, DM_Sans, Orbitron, Space_Grotesk } from 'next/font/google';
 import { StoreProvider } from '@/components/StoreProvider';
 import CartDrawer from '@/components/CartDrawer';
 import QuickView from '@/components/QuickView';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-dm-sans',
+});
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '800', '900'],
+  variable: '--font-orbitron',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-space-grotesk',
+});
 
 const SITE_URL = 'https://daniel-gadgets.vercel.app';
 
@@ -84,14 +109,8 @@ export default async function RootLayout({ children }) {
   const nonce = (await headers()).get('x-nonce') ?? undefined;
 
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning className={`${montserrat.variable} ${dmSans.variable} ${orbitron.variable} ${spaceGrotesk.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Orbitron:wght@400;500;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
         {/* suppressHydrationWarning: browsers hide the CSP nonce from the DOM
             after load, so the client sees nonce="" — this is expected, not a bug. */}
         <script
