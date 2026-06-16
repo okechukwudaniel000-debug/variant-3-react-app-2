@@ -10,8 +10,8 @@ import { NextResponse, type NextRequest } from 'next/server';
    by app/layout.js for the inline theme script), and set the CSP
    on both the request and response as Next.js requires.
 
-   (Next 16 renamed the `middleware` convention to `proxy`.)
-============================================================ */
+   Next 16 renamed the `middleware` convention to `proxy`.
+   ============================================================ */
 export function proxy(request: NextRequest) {
   const nonce = btoa(crypto.randomUUID());
   const isDev = process.env.NODE_ENV !== 'production';

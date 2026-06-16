@@ -70,8 +70,10 @@ const API_CONFIG = {
 
     // 1. Local Development Fallback
     // If we're on localhost or 127.0.0.1 (likely using Live Server or direct access),
-    // we target the backend port (5000) directly.
-    if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.')) {
+    // or if opened locally via file protocol, we target the backend port (5000) directly.
+    if (!hostname || protocol === 'file:') {
+      baseURL = 'http://localhost:5000';
+    } else if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.')) {
       baseURL = `${protocol}//${hostname}:5000`;
     } 
     // 2. Subdomain Logic

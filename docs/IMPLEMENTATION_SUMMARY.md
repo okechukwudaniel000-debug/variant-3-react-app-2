@@ -2,7 +2,7 @@
 
 ## 🎯 Changes Made
 
-### 1. **Frontend Enhancement** (gadgets.html)
+### 1. **Frontend Enhancement** (../legacy/gadgets.html)
 
 Added intelligent API routing configuration with fallback support:
 
@@ -24,7 +24,7 @@ API_CONFIG = {
 - `createProductCard()` - Builds HTML cards from API data
 - `attachFilterHandlers()` - Re-attaches filters after load
 
-### 2. **Backend Enhancement** (server.js)
+### 2. **Backend Enhancement** (../fullstack/backend/server.js)
 
 Upgraded Express server with subdomain-aware CORS:
 
@@ -42,7 +42,7 @@ corsOptions = {
 - ✅ `GET /api/products/:id` - Get single product
 - ✅ Better error handling
 
-### 3. **Data Format** (products.json)
+### 3. **Data Format** (../data/products.json)
 
 Restructured for API compatibility:
 

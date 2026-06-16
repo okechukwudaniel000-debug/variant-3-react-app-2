@@ -14,15 +14,12 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState('login'); // 'login' | 'register'
-  const [userInitial, setUserInitial] = useState('');
   const [theme, setTheme] = useState('dark');
-  const { hydrated, cartCount, wishlistCount, openDrawer } = useStore();
+  const { hydrated, cartCount, wishlistCount, openDrawer, user, login, logout } = useStore();
   const authModalRef = useFocusTrap(authOpen);
 
-  // Restore saved user + theme on mount.
+  // Restore saved theme on mount.
   useEffect(() => {
-    const savedUser = localStorage.getItem('dg_user');
-    if (savedUser) setUserInitial(savedUser.charAt(0).toUpperCase());
     const savedTheme = localStorage.getItem('dg_theme') || 'dark';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -53,16 +50,12 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
 
   function handleAuthSubmit(e, mode) {
     e.preventDefault();
-    let name;
     if (mode === 'login') {
       const email = e.target.elements.lEmail.value;
-      name = email.split('@')[0];
+      login(email);
     } else {
-      name = e.target.elements.rName.value;
-    }
-    if (name) {
-      setUserInitial(name.charAt(0).toUpperCase());
-      localStorage.setItem('dg_user', name);
+      const email = e.target.elements.rEmail.value;
+      login(email);
     }
     setAuthOpen(false);
   }
@@ -129,41 +122,47 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
             </svg>
             {hydrated && cartCount > 0 && <span className="nav-badge">{cartCount}</span>}
           </button>
-          <button
-            className="nav-icon"
-            aria-label="Account"
-            style={{ color: 'var(--txt)' }}
-            onClick={() => {
-              setAuthMode('login');
-              setAuthOpen(true);
-            }}
-          >
-            {userInitial ? (
-              <div className="user-avatar">{userInitial}</div>
-            ) : (
-              <svg
-                width="22"
-                height="22"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-            )}
-          </button>
+          <div className="account-container" style={{ position: 'relative' }}>
+            <button
+              className="nav-icon"
+              aria-label="Account"
+              style={{ color: 'var(--txt)' }}
+              onClick={() => {
+                if (user) {
+                  if (window.confirm(`Logout ${user.name}?`)) logout();
+                } else {
+                  setAuthMode('login');
+                  setAuthOpen(true);
+                }
+              }}
+            >
+              {hydrated && user ? (
+                <div className="user-avatar" title={`Logged in as ${user.name}`}>{user.initial}</div>
+              ) : (
+                <svg
+                  width="22"
+                  height="22"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </nav>
 
       {/* ======== SIDE MENU OVERLAY ======== */}
       <div
         className={`overlay${menuOpen ? ' on' : ''}`}
-        aria-hidden={!menuOpen}
+        role="presentation"
         onClick={() => setMenuOpen(false)}
       ></div>
 
@@ -183,6 +182,11 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
               <span>{l.label}</span>
             </a>
           ))}
+          {hydrated && !user && (
+             <Link href="/login" className="mlink" onClick={() => setMenuOpen(false)}>
+                <span>Sign In</span>
+             </Link>
+          )}
         </nav>
         {showThemeToggle && (
           <>
@@ -272,6 +276,7 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
                 <input
                   type="email"
                   className="auth-input"
+                  name="rEmail"
                   placeholder="name@example.com"
                   required
                 />

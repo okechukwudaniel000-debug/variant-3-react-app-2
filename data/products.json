@@ -13,7 +13,7 @@
       "Storage": "256GB",
       "Camera": "48MP Fusion"
     },
-    "image": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&q=80&w=500",
+    "image": "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
@@ -30,7 +30,7 @@
       "Storage": "128GB",
       "Camera": "48MP Dual"
     },
-    "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=500",
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black",
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
@@ -47,7 +47,7 @@
       "Camera": "48MP Main",
       "Port": "USB-C"
     },
-    "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=500",
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black",
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
@@ -64,7 +64,7 @@
       "Storage": "8GB / 256GB",
       "Camera": "50MP Triple"
     },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/galaxy-s24-fe/gallery/uk-galaxy-s24-fe-s721-sm-s721bzadeua-thumb-543714271",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -81,7 +81,7 @@
       "Storage": "12GB / 256GB",
       "Battery": "4400mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-z-fold6-f956-sm-f956bzkbeua-542340578?$650_519_PNG$",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -98,7 +98,7 @@
       "Display": "6.9\" AMOLED Fold",
       "Camera": "64MP Dual"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "https://fdn2.gsmarena.com/vv/pics/tecno/tecno-phantom-v-flip2-1.jpg",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -115,7 +115,7 @@
       "Display": "120Hz AMOLED",
       "Camera": "108MP Triple"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "https://fdn2.gsmarena.com/vv/pics/infinix/infinix-note-40-pro-1.jpg",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -132,7 +132,7 @@
       "Camera": "50MP Main",
       "Battery": "5000mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-30-pro-1.jpg",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -149,7 +149,7 @@
       "Camera": "108MP Dual",
       "Battery": "5030mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1717400000.0000.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -166,7 +166,7 @@
       "Camera": "50MP Dual",
       "Battery": "5000mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/ae/sm-a065fzkfmea/gallery/ae-galaxy-a06-sm-a065-sm-a065fzkfmea-542000000?$650_519_PNG$",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -183,7 +183,7 @@
       "Display": "14\" Touch",
       "Form": "2-in-1 Convertible"
     },
-    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
+    "image": "https://p1-ofp.static.pub/medias/lenovo-laptop-ideapad-flex-5-14-intel-subseries-gallery-1.png",
     "gradient": "linear-gradient(135deg,rgba(200,200,200,.1),rgba(80,80,80,.15))"
   },
   {
@@ -200,7 +200,7 @@
       "Storage": "256GB SSD",
       "Display": "13.3\" Touch"
     },
-    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
+    "image": "https://i.dell.com/sites/csimages/Video_Imagery/all/latitude-7389-2-in-1-laptop.jpg",
     "gradient": "linear-gradient(135deg,rgba(150,155,180,.12),rgba(80,85,110,.18))"
   },
   {
@@ -217,7 +217,7 @@
       "Rating": "10ATM / IP68",
       "Health": "BioActive Sensor"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-watch-ultra-l705-sm-l705fztaeua-542344344?$650_519_PNG$",
     "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
   },
   {
@@ -234,7 +234,7 @@
       "Health": "BioActive Sensor",
       "OS": "Wear OS"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-watch7-l310-sm-l310nzkaeua-542343854?$650_519_PNG$",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -251,7 +251,7 @@
       "Battery": "Up to 36 Hours",
       "Rating": "WR100 / EN13319"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT603_VW_34FR+watch-49-ultra-titanium_VW_34FR_WF_CO+watch-face-49-ultra2-modular-ultra_VW_34FR_WF_CO_GEO_GB?wid=750&hei=750&trim=1&fmt=p-jpg&qlt=95&.v=1694551192890",
     "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
   },
   {
@@ -268,7 +268,7 @@
       "Modes": "Multi-Sport",
       "Battery": "Long Life"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "https://www.tecno-mobile.com/fileadmin/user_upload/Watch_1_01.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -285,7 +285,7 @@
       "Case": "USB-C MagSafe",
       "Battery": "30hrs w/ Case"
     },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1694014871985",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
@@ -302,7 +302,7 @@
       "Battery": "30 Hours",
       "Connectivity": "BT 5.2"
     },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "image": "https://www.sony.co.uk/image/614551456f47854770f905d20d545731?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -319,7 +319,7 @@
       "Connectivity": "BT 5.4",
       "Battery": "30hrs w/ Case"
     },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-buds3-pro-r630-sm-r630nzaaeua-542343488?$650_519_PNG$",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -336,7 +336,7 @@
       "Network": "LTE + WiFi",
       "Battery": "5100mAh"
     },
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=500",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-x110nzaaeua/gallery/uk-galaxy-tab-a9-wi-fi-x110-sm-x110nzaaeua-538541344?$650_519_PNG$",
     "gradient": "linear-gradient(135deg,rgba(188,0,255,.1),rgba(60,0,100,.2))"
   },
   {
@@ -353,7 +353,7 @@
       "Edition": "Disc Edition",
       "Feature": "DualSense Haptics"
     },
-    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
+    "image": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-slim-console-vertical-image-block-01-en-12oct23?$native$",
     "gradient": "linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,242,255,.1))"
   },
   {
@@ -370,7 +370,7 @@
       "Chipset": "Snapdragon XR2 Gen 2",
       "Feature": "Colour Passthrough"
     },
-    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
+    "image": "https://www.meta.com/static/images/quest/quest-3/quest-3-headset-front.png",
     "gradient": "linear-gradient(135deg,rgba(0,242,255,.1),rgba(0,80,120,.2))"
   }
 ]

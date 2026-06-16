@@ -20,13 +20,23 @@ import type { CartItem } from '@/lib/types';
    hydration mismatches).
 ============================================================ */
 
-const LS = { cart: 'dg_cart', wishlist: 'dg_wishlist', recent: 'dg_recent' } as const;
+const LS = { cart: 'dg_cart', wishlist: 'dg_wishlist', recent: 'dg_recent', user: 'dg_user' } as const;
 const RECENT_MAX = 8;
 
 type DrawerTab = 'cart' | 'wishlist';
 
+interface User {
+  name: string;
+  email: string;
+  initial: string;
+}
+
 interface StoreValue {
   hydrated: boolean;
+  // user
+  user: User | null;
+  login: (email: string) => void;
+  logout: () => void;
   // cart
   cart: CartItem[];
   cartCount: number;
@@ -66,6 +76,7 @@ function readLS<T>(key: string, fallback: T): T {
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
   const [cart, setCart] = useState<CartItem[]>([]);
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<string[]>([]);
@@ -75,6 +86,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   // Hydrate from localStorage on mount.
   useEffect(() => {
+    setUser(readLS<User | null>(LS.user, null));
     setCart(readLS<CartItem[]>(LS.cart, []));
     setWishlist(readLS<string[]>(LS.wishlist, []));
     setRecentlyViewed(readLS<string[]>(LS.recent, []));
@@ -82,6 +94,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   // Persist after hydration (never overwrite stored data before we've read it).
+  useEffect(() => {
+    if (hydrated) {
+      if (user) localStorage.setItem(LS.user, JSON.stringify(user));
+      else localStorage.removeItem(LS.user);
+    }
+  }, [user, hydrated]);
   useEffect(() => {
     if (hydrated) localStorage.setItem(LS.cart, JSON.stringify(cart));
   }, [cart, hydrated]);
@@ -96,6 +114,26 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.body.style.overflow = drawerOpen || quickViewId ? 'hidden' : '';
   }, [drawerOpen, quickViewId]);
+
+  const login = useCallback((email: string) => {
+    // Extract name from email: e.g. "john.doe@example.com" -> "John Doe"
+    const namePart = email.split('@')[0];
+    const formattedName = namePart
+      .split(/[._-]/)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
+    const newUser: User = {
+      name: formattedName,
+      email,
+      initial: formattedName.charAt(0).toUpperCase(),
+    };
+    setUser(newUser);
+  }, []);
+
+  const logout = useCallback(() => {
+    setUser(null);
+  }, []);
 
   const addToCart = useCallback((id: string, qty = 1) => {
     setCart((prev) => {
@@ -143,6 +181,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const value: StoreValue = {
     hydrated,
+    user,
+    login,
+    logout,
     cart,
     cartCount,
     addToCart,

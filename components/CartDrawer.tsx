@@ -64,7 +64,7 @@ export default function CartDrawer() {
     <>
       <div
         className={`drawer-overlay${drawerOpen ? ' on' : ''}`}
-        aria-hidden={!drawerOpen}
+        role="presentation"
         onClick={closeDrawer}
       />
       <aside

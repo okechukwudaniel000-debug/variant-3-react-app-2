@@ -24,7 +24,7 @@ The Daniel Gadgets website's featured products section has been enhanced to supp
 
 ### 🔧 Technical Changes
 
-**Frontend (gadgets.html)**
+**Frontend (legacy/gadgets.html)**
 
 - ✅ Added `API_CONFIG` object with subdomain detection
 - ✅ Implemented `fetchAndRenderProducts()` function
@@ -54,19 +54,30 @@ The Daniel Gadgets website's featured products section has been enhanced to supp
 ```
 gadgets_website/
 │
-├── gadgets.html                      ← Updated with API_CONFIG & dynamic loading
-├── IMPLEMENTATION_SUMMARY.md         ← What was changed and why
-├── SUBDOMAIN_SETUP_GUIDE.md         ← Complete production setup guide
-├── TESTING_GUIDE.md                 ← Testing scenarios and procedures
-│
-└── fullstack/
-    └── backend/
-        ├── server.js                 ← Updated with CORS & API endpoints
-        ├── package.json
-        ├── package-lock.json
-        └── data/
-            ├── products.json         ← Updated with new data structure
-            └── reviews.json
+├── app/                              ← Next.js Application (App Router)
+├── components/                       ← React Components
+├── docs/                             ← Project Documentation
+│   ├── ARCHITECTURE_DIAGRAMS.md
+│   ├── DOCUMENTATION_INDEX.md
+│   ├── ...
+├── infra/                            ← Infrastructure configuration
+│   ├── docker-compose.yml
+│   ├── nginx.conf
+│   └── proxy.ts
+├── legacy/                           ← Original static HTML files
+│   ├── gadgets.html
+│   ├── products.html
+│   ├── main.js
+│   └── style.css
+├── fullstack/
+│   └── backend/
+│       ├── server.js                 ← Updated with CORS & API endpoints
+│       ├── package.json
+│       ├── package-lock.json
+│       └── data/
+│           ├── products.json         ← Updated with new data structure
+│           └── reviews.json
+└── README.md
 ```
 
 ---
@@ -92,7 +103,7 @@ Daniel Gadgets Backend operational on port 5000
 **Option A: Local file (static fallback)**
 
 ```
-Open: file:///path/to/gadgets.html
+Open: file:///path/to/legacy/gadgets.html
 ```
 
 **Option B: With local dev server**
@@ -385,12 +396,12 @@ console.log(window.location.hostname);
 
 ## 📚 Documentation Files
 
-| File                          | Purpose                                   |
-| ----------------------------- | ----------------------------------------- |
-| **IMPLEMENTATION_SUMMARY.md** | Overview of changes, architecture diagram |
-| **SUBDOMAIN_SETUP_GUIDE.md**  | Complete production setup instructions    |
-| **TESTING_GUIDE.md**          | Testing scenarios, API tests, debugging   |
-| **README.md**                 | This file - project overview              |
+| File                                | Purpose                                   |
+| ----------------------------------- | ----------------------------------------- |
+| **docs/IMPLEMENTATION_SUMMARY.md**  | Overview of changes, architecture diagram |
+| **docs/SUBDOMAIN_SETUP_GUIDE.md**   | Complete production setup instructions    |
+| **docs/TESTING_GUIDE.md**           | Testing scenarios, API tests, debugging   |
+| **README.md**                       | This file - project overview              |
 
 ---
 
@@ -411,7 +422,7 @@ console.log(window.location.hostname);
 
 ### Immediate
 
-- [x] Update gadgets.html with API_CONFIG
+- [x] Update legacy/gadgets.html with API_CONFIG
 - [x] Update server.js with CORS & endpoints
 - [x] Update products.json structure
 - [ ] **Test with backend running**
@@ -440,6 +451,7 @@ console.log(window.location.hostname);
 3. **CORS configuration** needs to include your domain
 4. **Category field** must be one of: `phones`, `laptops`, `accessories`
 5. **Price field** must be numeric (not string with ₦)
+6. **Legacy files** (gadgets.html, etc.) are now in the `legacy/` folder.
 
 ---
 
@@ -447,8 +459,8 @@ console.log(window.location.hostname);
 
 **Check these resources:**
 
-1. **SUBDOMAIN_SETUP_GUIDE.md** - Detailed setup instructions
-2. **TESTING_GUIDE.md** - How to test each scenario
+1. **docs/SUBDOMAIN_SETUP_GUIDE.md** - Detailed setup instructions
+2. **docs/TESTING_GUIDE.md** - How to test each scenario
 3. **Browser console** - Debug logs and error messages
 4. **Network tab** - Inspect API requests and responses
 
@@ -468,12 +480,3 @@ console.log(window.location.hostname);
 **🎉 Ready to take your featured products section to the next level!**
 
 **Next action:** Run backend and test locally!
-#   v a r i a n t . 3 
- 
- #   h t m l - c o u r s e 
- 
- #   h t m l - c o u r s e 
- 
- #   v 1 
- 
- 

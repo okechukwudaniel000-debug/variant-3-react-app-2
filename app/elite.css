@@ -532,7 +532,7 @@
   color: var(--accent-cyan);
 }
 .qv-name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 1.5rem;
   margin: 6px 0 10px;
 }
@@ -569,7 +569,7 @@
   margin-bottom: 16px;
 }
 .qv-price {
-  font-family: 'Orbitron', 'Montserrat', sans-serif;
+  font-family: var(--font-orbitron), var(--font-montserrat), sans-serif;
   font-size: 1.5rem;
   color: var(--accent-cyan);
 }
@@ -664,7 +664,7 @@
   color: var(--accent-cyan);
 }
 .pdp-name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   margin: 8px 0 14px;
 }
@@ -675,7 +675,7 @@
   margin-bottom: 22px;
 }
 .pdp-price {
-  font-family: 'Orbitron', 'Montserrat', sans-serif;
+  font-family: var(--font-orbitron), var(--font-montserrat), sans-serif;
   font-size: 1.8rem;
   color: var(--accent-cyan);
 }
@@ -754,7 +754,7 @@
   margin-top: 70px;
 }
 .pdp-section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 1.4rem;
   margin-bottom: 22px;
 }
@@ -825,11 +825,18 @@
 .ft-col a:hover {
   color: var(--accent-cyan);
 }
+.ft-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .ft-about p {
   color: var(--txt2);
   font-size: 0.9rem;
-  margin: 12px 0 18px;
+  margin: 12px auto 18px;
   max-width: 36ch;
+  text-align: center;
 }
 .ft-news-form {
   display: flex;
