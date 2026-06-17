@@ -91,13 +91,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const wishlist = readLS<string[]>(LS.wishlist, []);
     const recent = readLS<string[]>(LS.recent, []);
 
-    queueMicrotask(() => {
-      setUser(user);
-      setCart(cart);
-      setWishlist(wishlist);
-      setRecentlyViewed(recent);
-      setHydrated(true);
-    });
+    setUser(user);
+    setCart(cart);
+    setWishlist(wishlist);
+    setRecentlyViewed(recent);
+    setHydrated(true);
   }, []);
 
   // Persist after hydration (never overwrite stored data before we've read it).

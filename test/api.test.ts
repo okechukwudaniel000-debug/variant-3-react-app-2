@@ -44,8 +44,9 @@ describe('POST /api/newsletter', () => {
   });
 
   it('accepts a valid email with 201', async () => {
+    const email = `sub-${Math.random().toString(36).slice(2)}@example.com`;
     const res = await newsletterPOST(
-      jsonReq('http://x/api/newsletter', { email: 'sub@example.com' }, '10.0.1.2')
+      jsonReq('http://x/api/newsletter', { email }, '10.0.1.2')
     );
     expect(res.status).toBe(201);
   });

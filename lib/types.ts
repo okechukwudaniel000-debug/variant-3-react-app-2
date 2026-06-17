@@ -14,6 +14,7 @@ export interface Product {
   description: string;
   price: number;
   stock: boolean;
+  remaining: number;
   specs: Record<string, string>;
   image?: string;
   gradient?: string;
