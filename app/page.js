@@ -87,6 +87,7 @@ export default function HomePage() {
           <div className="about-line"></div>
         </div>
       </section>
+      
 
       {/* ======== CONTACT ======== */}
       <section className="sec contact" id="contact">
