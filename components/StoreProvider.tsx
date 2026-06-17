@@ -86,11 +86,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   // Hydrate from localStorage on mount.
   useEffect(() => {
-    setUser(readLS<User | null>(LS.user, null));
-    setCart(readLS<CartItem[]>(LS.cart, []));
-    setWishlist(readLS<string[]>(LS.wishlist, []));
-    setRecentlyViewed(readLS<string[]>(LS.recent, []));
-    setHydrated(true);
+    const user = readLS<User | null>(LS.user, null);
+    const cart = readLS<CartItem[]>(LS.cart, []);
+    const wishlist = readLS<string[]>(LS.wishlist, []);
+    const recent = readLS<string[]>(LS.recent, []);
+
+    queueMicrotask(() => {
+      setUser(user);
+      setCart(cart);
+      setWishlist(wishlist);
+      setRecentlyViewed(recent);
+      setHydrated(true);
+    });
   }, []);
 
   // Persist after hydration (never overwrite stored data before we've read it).

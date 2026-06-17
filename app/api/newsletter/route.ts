@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
 import { validateStrings } from '@/lib/validation';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
+import { readFile, writeFile, mkdir } from 'fs/promises';
+import { join } from 'path';
 
 const MAX_BODY_BYTES = 2 * 1024;
+const DATA_DIR = join(process.cwd(), 'data');
+const SUBSCRIBERS_FILE = join(DATA_DIR, 'subscribers.json');
 
 // POST /api/newsletter -> validated, rate-limited email capture (footer signup).
 export async function POST(request: Request): Promise<NextResponse> {
@@ -33,6 +37,48 @@ export async function POST(request: Request): Promise<NextResponse> {
     return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 });
   }
 
-  console.log(`[newsletter] subscribe: ${result.value!.email}`);
-  return NextResponse.json({ success: true, message: 'You are subscribed. Welcome aboard!' });
+  const validatedEmail = result.value!.email.toLowerCase();
+
+  try {
+    // Ensure data directory exists
+    try {
+      await mkdir(DATA_DIR, { recursive: true });
+    } catch (err) {
+      // Ignore if directory already exists
+    }
+
+    let subscribers: { email: string; timestamp: string }[] = [];
+    try {
+      const content = await readFile(SUBSCRIBERS_FILE, 'utf-8');
+      subscribers = JSON.parse(content);
+    } catch (err: any) {
+      if (err.code !== 'ENOENT') {
+        console.error('[newsletter] error reading subscribers:', err);
+        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+      }
+    }
+
+    // Check for existing subscription
+    if (subscribers.some((s) => s.email.toLowerCase() === validatedEmail)) {
+      return NextResponse.json({ error: 'This email is already subscribed.' }, { status: 400 });
+    }
+
+    // Add new subscriber
+    subscribers.push({
+      email: validatedEmail,
+      timestamp: new Date().toISOString(),
+    });
+
+    // Write back to file
+    await writeFile(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2));
+
+    console.log(`[newsletter] subscribe success: ${validatedEmail}`);
+    return NextResponse.json(
+      { success: true, message: 'You are subscribed. Welcome aboard!' },
+      { status: 201 }
+    );
+  } catch (err) {
+    console.error('[newsletter] error saving subscriber:', err);
+    return NextResponse.json({ error: 'Failed to save subscription. Please try again.' }, { status: 500 });
+  }
 }
