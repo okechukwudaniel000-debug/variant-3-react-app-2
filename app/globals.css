@@ -12,6 +12,8 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--bg);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar {
   width: 5px;
@@ -85,6 +87,7 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
   background: var(--bg);
   color: var(--txt);
+  max-width: 100%;
   overflow-x: hidden;
   line-height: 1.7;
   transition:
@@ -834,7 +837,8 @@ h4 {
   z-index: 10;
   text-align: center;
   padding: 90px 24px 70px;
-  max-width: var(--mw);
+  width: 100%;
+  max-width: min(var(--mw), 100%);
   margin: 0 auto;
   transform: translateY(-8px);
   margin-top: -8px;
@@ -879,16 +883,25 @@ h4 {
 
 .hero-h1 {
   font-family: var(--font-orbitron), var(--font-montserrat), sans-serif;
-  font-size: clamp(5rem, 8.8vw, 7rem);
+  /* Fluid floor lowered from 5rem so a single word ("GADGETS") can never be
+     wider than a narrow phone viewport, which was forcing horizontal scroll. */
+  font-size: clamp(2.4rem, 11vw, 7rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.02;
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
   margin-bottom: 14px;
   animation: fadeup 1.6s 0.1s both;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  /* Promote the scrambling title to its own layer and isolate its layout so
+     per-frame text swaps don't trigger page-wide reflow/repaint on mobile. */
+  contain: layout style;
+  transform: translateZ(0);
 }
 .h1-main {
   display: inline-block;
+  max-width: 100%;
   background: linear-gradient(135deg, #eff8ff 0%, #c7d2fe 40%, #92a7ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1975,6 +1988,12 @@ footer::after {
   }
   .pgrid {
     grid-template-columns: 1fr;
+  }
+  .hero-con {
+    padding: 80px 16px 60px;
+  }
+  .hero-h1 {
+    letter-spacing: -0.02em;
   }
 }
 
