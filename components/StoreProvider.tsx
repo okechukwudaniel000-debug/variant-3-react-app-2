@@ -84,18 +84,25 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [drawerTab, setDrawerTab] = useState<DrawerTab>('cart');
   const [quickViewId, setQuickViewId] = useState<string | null>(null);
 
-  // Hydrate from localStorage on mount.
+  // Hydrate from localStorage on mount. State intentionally starts empty so the
+  // server render and the client's first render match; we then read the external
+  // store (localStorage) once and sync it in. This is the legitimate "subscribe
+  // to an external system" case the rule allows — not a cascading render — and a
+  // lazy useState initializer can't be used here because it runs during SSR
+  // (no localStorage) and would reintroduce a hydration mismatch.
   useEffect(() => {
-    const user = readLS<User | null>(LS.user, null);
-    const cart = readLS<CartItem[]>(LS.cart, []);
-    const wishlist = readLS<string[]>(LS.wishlist, []);
-    const recent = readLS<string[]>(LS.recent, []);
+    const storedUser = readLS<User | null>(LS.user, null);
+    const storedCart = readLS<CartItem[]>(LS.cart, []);
+    const storedWishlist = readLS<string[]>(LS.wishlist, []);
+    const storedRecent = readLS<string[]>(LS.recent, []);
 
-    setUser(user);
-    setCart(cart);
-    setWishlist(wishlist);
-    setRecentlyViewed(recent);
+    /* eslint-disable react-hooks/set-state-in-effect -- one-time external-store hydration, see above */
+    setUser(storedUser);
+    setCart(storedCart);
+    setWishlist(storedWishlist);
+    setRecentlyViewed(storedRecent);
     setHydrated(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   // Persist after hydration (never overwrite stored data before we've read it).
