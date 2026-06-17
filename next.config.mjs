@@ -19,8 +19,21 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    // Product imagery is served from Unsplash; allow it through next/image.
-    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+    remotePatterns: [
+      { protocol: 'https', hostname: '**.unsplash.com' },
+      { protocol: 'https', hostname: '**.apple.com' },
+      { protocol: 'https', hostname: '**.samsung.com' },
+      { protocol: 'https', hostname: '**.gsmarena.com' },
+      { protocol: 'https', hostname: '**.appmifile.com' },
+      { protocol: 'https', hostname: '**.static.pub' },
+      { protocol: 'https', hostname: '**.dell.com' },
+      { protocol: 'https', hostname: '**.sony.co.uk' },
+      { protocol: 'https', hostname: '**.sony.com' },
+      { protocol: 'https', hostname: '**.tecno-mobile.com' },
+      { protocol: 'https', hostname: '**.playstation.com' },
+      { protocol: 'https', hostname: '**.meta.com' },
+      { protocol: 'https', hostname: '**.cdn-apple.com' },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   async redirects() {

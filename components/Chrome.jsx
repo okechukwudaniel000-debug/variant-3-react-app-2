@@ -21,7 +21,10 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
   // Restore saved theme on mount.
   useEffect(() => {
     const savedTheme = localStorage.getItem('dg_theme') || 'dark';
-    setTheme(savedTheme);
+    // Use a microtask to avoid synchronous setState in effect (Next.js hydration)
+    queueMicrotask(() => {
+      setTheme(savedTheme);
+    });
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 

@@ -188,9 +188,10 @@
   background: linear-gradient(135deg, var(--accent-cyan), #38bdf8);
   box-shadow: 0 0 14px var(--glow-cyan);
 }
-.pbadge-out {
-  color: #fff;
-  background: rgba(255, 80, 80, 0.85);
+.pbadge-stock {
+  color: var(--accent-cyan);
+  background: rgba(0, 242, 255, 0.1);
+  border: 1px solid rgba(0, 242, 255, 0.3);
 }
 
 .wish-btn {

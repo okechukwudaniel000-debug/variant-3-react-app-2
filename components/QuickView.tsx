@@ -83,16 +83,15 @@ export default function QuickView() {
             <div className="qv-price">{formatNaira(product.price)}</div>
             <span
               className="qv-stock"
-              style={{ color: product.stock ? 'var(--accent-cyan)' : 'rgba(255,120,120,.9)' }}
+              style={{ color: 'var(--accent-cyan)' }}
             >
-              {product.stock ? 'In Stock' : 'Out of Stock'}
+              {product.remaining} remaining
             </span>
           </div>
 
           <div className="qv-actions">
             <button
               className="btn-p qv-add"
-              disabled={!product.stock}
               onClick={() => {
                 addToCart(product.id);
                 closeQuickView();

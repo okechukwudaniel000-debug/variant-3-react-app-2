@@ -6,6 +6,7 @@ import { getAllProducts } from '@/lib/products';
 
 // Mock Next's image/link so the grid renders as plain DOM in jsdom.
 vi.mock('next/image', () => ({
+  // eslint-disable-next-line @next/next/no-img-element
   default: ({ src, alt }: { src: string; alt: string }) => <img src={src} alt={alt} />,
 }));
 vi.mock('next/link', () => ({

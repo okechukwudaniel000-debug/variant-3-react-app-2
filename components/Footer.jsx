@@ -118,13 +118,6 @@ export default function Footer({ full = true }) {
                 {l.label}
               </Link>
             ))}
-            {user ? (
-              <button onClick={() => window.confirm('Logout?') && logout()} className="ft-link-btn" style={{ background: 'none', border: 'none', color: 'inherit', padding: 0, textAlign: 'left', font: 'inherit', cursor: 'pointer', display: 'block', marginTop: 8 }}>
-                Logout ({user.name})
-              </button>
-            ) : (
-              <Link href="/login" style={{ marginTop: 8 }}>Login</Link>
-            )}
             <h4 style={{ marginTop: 18 }}>Support</h4>
             {SUPPORT_LINKS.map((l) => (
               <Link key={l.label} href={l.href}>
@@ -175,8 +168,32 @@ export default function Footer({ full = true }) {
             <span>24-Hour Delivery</span>
           </div>
         )}
-        <div className="footer-status">
-          <span className="status-dot"></span> System Operational
+        <div className="footer-status" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span className="status-dot"></span> System Operational
+          </div>
+          {user && (
+            <button 
+              onClick={() => window.confirm('Logout?') && logout()} 
+              className="ft-logout-btn"
+              style={{ 
+                background: 'none', 
+                border: 'none', 
+                color: 'var(--txt3)', 
+                fontSize: '0.75rem', 
+                textTransform: 'uppercase', 
+                letterSpacing: '0.1em',
+                cursor: 'pointer',
+                opacity: 0.6,
+                transition: 'opacity 0.2s var(--ease)',
+                padding: '5px 10px'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '0.6'}
+            >
+              Logout Session ({user.name})
+            </button>
+          )}
         </div>
       </div>
       <p className="ft-copy">© 2026 Daniel Gadgets. All Rights Reserved.</p>

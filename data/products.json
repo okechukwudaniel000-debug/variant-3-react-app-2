@@ -7,13 +7,14 @@
     "description": "A18 Pro chip, 48MP Fusion camera, Camera Control button and titanium design.",
     "price": 2500000,
     "stock": true,
+    "remaining": 4,
     "specs": {
       "Chipset": "A18 Pro Bionic",
       "Display": "6.9\" ProMotion",
       "Storage": "256GB",
       "Camera": "48MP Fusion"
     },
-    "image": "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg",
+    "image": "/iPhone 16 Pro Max 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
@@ -24,13 +25,14 @@
     "description": "A18 chip, 48MP main camera, Action Button and the new Camera Control.",
     "price": 1850000,
     "stock": true,
+    "remaining": 7,
     "specs": {
       "Chipset": "A18 Bionic",
       "Display": "6.1\" Super Retina XDR",
       "Storage": "128GB",
       "Camera": "48MP Dual"
     },
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black",
+    "image": "/iPhone 16 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
@@ -41,13 +43,14 @@
     "description": "48MP main camera, Dynamic Island, USB-C and the A16 Bionic chip.",
     "price": 1550000,
     "stock": true,
+    "remaining": 12,
     "specs": {
       "Chip": "A16 Bionic",
       "Display": "Super Retina XDR",
       "Camera": "48MP Main",
       "Port": "USB-C"
     },
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black",
+    "image": "/iPhone 15 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
@@ -58,13 +61,14 @@
     "description": "Flagship Fan Edition with Galaxy AI, 50MP camera and Exynos 2400e power.",
     "price": 1115000,
     "stock": true,
+    "remaining": 5,
     "specs": {
       "Processor": "Exynos 2400e",
       "Display": "6.7\" AMOLED 2X",
       "Storage": "8GB / 256GB",
       "Camera": "50MP Triple"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/galaxy-s24-fe/gallery/uk-galaxy-s24-fe-s721-sm-s721bzadeua-thumb-543714271",
+    "image": "/Galaxy S24 FE 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -75,13 +79,14 @@
     "description": "Foldable powerhouse with a 7.6\" main display, Galaxy AI and S-Pen support.",
     "price": 3005000,
     "stock": true,
+    "remaining": 3,
     "specs": {
       "Processor": "SD 8 Gen 3",
       "Main Display": "7.6\" AMOLED 2X",
       "Storage": "12GB / 256GB",
       "Battery": "4400mAh"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-z-fold6-f956-sm-f956bzkbeua-542340578?$650_519_PNG$",
+    "image": "/Galaxy Z Fold 6 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -92,13 +97,14 @@
     "description": "Compact 5G flip phone with a vivid cover screen and 8GB RAM.",
     "price": 1060000,
     "stock": true,
+    "remaining": 6,
     "specs": {
       "Network": "5G",
       "Memory": "8GB / 256GB",
       "Display": "6.9\" AMOLED Fold",
       "Camera": "64MP Dual"
     },
-    "image": "https://fdn2.gsmarena.com/vv/pics/tecno/tecno-phantom-v-flip2-1.jpg",
+    "image": "/Phantom V Flip 2 5G 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -109,13 +115,14 @@
     "description": "108MP camera, 8GB RAM and 45W all-round fast charging on Android 14.",
     "price": 405500,
     "stock": true,
+    "remaining": 15,
     "specs": {
       "OS": "Android 14",
       "Memory": "8GB / 256GB",
       "Display": "120Hz AMOLED",
       "Camera": "108MP Triple"
     },
-    "image": "https://fdn2.gsmarena.com/vv/pics/infinix/infinix-note-40-pro-1.jpg",
+    "image": "/Note 40 Pro 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -126,13 +133,14 @@
     "description": "Big 8GB RAM, 256GB storage and a smooth 120Hz display for everyday use.",
     "price": 285100,
     "stock": true,
+    "remaining": 9,
     "specs": {
       "Memory": "8GB / 256GB",
       "Display": "120Hz",
       "Camera": "50MP Main",
       "Battery": "5000mAh"
     },
-    "image": "https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-30-pro-1.jpg",
+    "image": "/Spark 30 Pro 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -143,13 +151,14 @@
     "description": "108MP camera, large 8GB RAM and a crisp FHD+ display at a great price.",
     "price": 250600,
     "stock": true,
+    "remaining": 11,
     "specs": {
       "Memory": "8GB / 256GB",
       "Display": "FHD+ 90Hz",
       "Camera": "108MP Dual",
       "Battery": "5030mAh"
     },
-    "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1717400000.0000.png",
+    "image": "/Redmi 13 8GB 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -159,14 +168,15 @@
     "name": "Galaxy A06 4GB 128GB",
     "description": "Affordable everyday Samsung with a 50MP camera and 5000mAh battery.",
     "price": 156500,
-    "stock": false,
+    "stock": true,
+    "remaining": 20,
     "specs": {
       "Memory": "4GB / 128GB",
       "Display": "6.7\" HD+",
       "Camera": "50MP Dual",
       "Battery": "5000mAh"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/ae/sm-a065fzkfmea/gallery/ae-galaxy-a06-sm-a065-sm-a065fzkfmea-542000000?$650_519_PNG$",
+    "image": "/Galaxy A06 4GB 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -176,14 +186,15 @@
     "name": "Ideapad Flex 5 14\"",
     "description": "Versatile 2-in-1 convertible with 8GB RAM and a fast 512GB SSD.",
     "price": 770000,
-    "stock": false,
+    "stock": true,
+    "remaining": 5,
     "specs": {
       "Memory": "8GB RAM",
       "Storage": "512GB SSD",
       "Display": "14\" Touch",
       "Form": "2-in-1 Convertible"
     },
-    "image": "https://p1-ofp.static.pub/medias/lenovo-laptop-ideapad-flex-5-14-intel-subseries-gallery-1.png",
+    "image": "/Ideapad Flex 5 14.png",
     "gradient": "linear-gradient(135deg,rgba(200,200,200,.1),rgba(80,80,80,.15))"
   },
   {
@@ -193,14 +204,15 @@
     "name": "Latitude 7389 2-in-1",
     "description": "13.3\" business convertible, Core i7, 16GB RAM and a 256GB SSD on Win 10 Pro.",
     "price": 437000,
-    "stock": false,
+    "stock": true,
+    "remaining": 3,
     "specs": {
       "Processor": "Intel Core i7",
       "Memory": "16GB RAM",
       "Storage": "256GB SSD",
       "Display": "13.3\" Touch"
     },
-    "image": "https://i.dell.com/sites/csimages/Video_Imagery/all/latitude-7389-2-in-1-laptop.jpg",
+    "image": "/Latitude 7389 2-in-1.png",
     "gradient": "linear-gradient(135deg,rgba(150,155,180,.12),rgba(80,85,110,.18))"
   },
   {
@@ -211,13 +223,14 @@
     "description": "Rugged titanium smartwatch with LTE, advanced health and 100m water resistance.",
     "price": 861000,
     "stock": true,
+    "remaining": 6,
     "specs": {
       "Case": "47mm Titanium",
       "Connectivity": "LTE + BT",
       "Rating": "10ATM / IP68",
       "Health": "BioActive Sensor"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-watch-ultra-l705-sm-l705fztaeua-542344344?$650_519_PNG$",
+    "image": "/Galaxy Watch Ultra LTE 47mm.png",
     "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
   },
   {
@@ -228,13 +241,14 @@
     "description": "Bluetooth smartwatch with advanced BioActive sensors, sleep tracking and Wear OS.",
     "price": 436000,
     "stock": true,
+    "remaining": 14,
     "specs": {
       "Case": "44mm",
       "Connectivity": "Bluetooth",
       "Health": "BioActive Sensor",
       "OS": "Wear OS"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-watch7-l310-sm-l310nzkaeua-542343854?$650_519_PNG$",
+    "image": "/Galaxy Watch7 44mm.png",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -245,13 +259,14 @@
     "description": "Rugged titanium case, brightest Apple display ever, precision dual-frequency GPS.",
     "price": 1950000,
     "stock": true,
+    "remaining": 4,
     "specs": {
       "Case": "49mm Titanium",
       "Chip": "S9 SiP",
       "Battery": "Up to 36 Hours",
       "Rating": "WR100 / EN13319"
     },
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT603_VW_34FR+watch-49-ultra-titanium_VW_34FR_WF_CO+watch-face-49-ultra2-modular-ultra_VW_34FR_WF_CO_GEO_GB?wid=750&hei=750&trim=1&fmt=p-jpg&qlt=95&.v=1694551192890",
+    "image": "/Apple Watch Ultra 2 49mm.png",
     "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
   },
   {
@@ -262,13 +277,14 @@
     "description": "Affordable fitness smartwatch with heart-rate monitoring and multiple sport modes.",
     "price": 15000,
     "stock": true,
+    "remaining": 25,
     "specs": {
       "Display": "Full Touch",
       "Health": "Heart Rate",
       "Modes": "Multi-Sport",
       "Battery": "Long Life"
     },
-    "image": "https://www.tecno-mobile.com/fileadmin/user_upload/Watch_1_01.png",
+    "image": "/Tecno Watch 1.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -279,13 +295,14 @@
     "description": "Adaptive Audio, 2x stronger Active Noise Cancellation and USB-C charging.",
     "price": 355000,
     "stock": true,
+    "remaining": 18,
     "specs": {
       "Chip": "Apple H2",
       "ANC": "Active + Adaptive",
       "Case": "USB-C MagSafe",
       "Battery": "30hrs w/ Case"
     },
-    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1694014871985",
+    "image": "/AirPods Pro (2nd Gen).png",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
@@ -296,13 +313,14 @@
     "description": "Industry-leading noise cancellation with crystal-clear hands-free calling.",
     "price": 490000,
     "stock": true,
+    "remaining": 8,
     "specs": {
       "Type": "Over-ear Wireless",
       "ANC": "Dual Processor",
       "Battery": "30 Hours",
       "Connectivity": "BT 5.2"
     },
-    "image": "https://www.sony.co.uk/image/614551456f47854770f905d20d545731?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+    "image": "/WH-1000XM5 Headphones.png",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -313,13 +331,14 @@
     "description": "Intelligent ANC, blade-style design and 360° spatial audio.",
     "price": 283000,
     "stock": true,
+    "remaining": 10,
     "specs": {
       "Audio": "Hi-Fi 24-bit",
       "ANC": "Intelligent",
       "Connectivity": "BT 5.4",
       "Battery": "30hrs w/ Case"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-buds3-pro-r630-sm-r630nzaaeua-542343488?$650_519_PNG$",
+    "image": "/Galaxy Buds 3 Pro.png",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -330,13 +349,14 @@
     "description": "Compact 8.7\" tablet with LTE, 4GB RAM and dual speakers for media on the go.",
     "price": 291000,
     "stock": true,
+    "remaining": 13,
     "specs": {
       "Display": "8.7\" WXGA+",
       "Memory": "4GB / 64GB",
       "Network": "LTE + WiFi",
       "Battery": "5100mAh"
     },
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-x110nzaaeua/gallery/uk-galaxy-tab-a9-wi-fi-x110-sm-x110nzaaeua-538541344?$650_519_PNG$",
+    "image": "/Galaxy Tab A9 LTE 64GB.png",
     "gradient": "linear-gradient(135deg,rgba(188,0,255,.1),rgba(60,0,100,.2))"
   },
   {
@@ -347,13 +367,14 @@
     "description": "Slimmer PS5 with a 1TB SSD, lightning-fast loading and 4K gaming.",
     "price": 800000,
     "stock": true,
+    "remaining": 6,
     "specs": {
       "Storage": "1TB SSD",
       "Resolution": "Up to 4K 120Hz",
       "Edition": "Disc Edition",
       "Feature": "DualSense Haptics"
     },
-    "image": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-slim-console-vertical-image-block-01-en-12oct23?$native$",
+    "image": "/PlayStation 5 Slim 1TB.png",
     "gradient": "linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,242,255,.1))"
   },
   {
@@ -364,13 +385,14 @@
     "description": "Breakthrough mixed-reality headset with full-colour passthrough and crisp visuals.",
     "price": 900000,
     "stock": true,
+    "remaining": 2,
     "specs": {
       "Storage": "128GB",
       "Display": "4K+ Infinite",
       "Chipset": "Snapdragon XR2 Gen 2",
       "Feature": "Colour Passthrough"
     },
-    "image": "https://www.meta.com/static/images/quest/quest-3/quest-3-headset-front.png",
+    "image": "/Meta Quest 3 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(0,242,255,.1),rgba(0,80,120,.2))"
   }
 ]

@@ -31,5 +31,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", ".next", "fullstack", "main.js", "gadgets.html", "products.html"]
+  "exclude": ["node_modules", ".next", "fullstack", "mainn.js", "gadgets.html", "products.html"]
 }

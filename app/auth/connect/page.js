@@ -10,28 +10,26 @@ function ConnectContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const email = searchParams.get('email') || '';
-  const { login, hydrated } = useStore();
-  const [loading, setLoading] = useState(false);
-  const [step, setStep] = useState('request'); // 'request' | 'connecting' | 'success'
+  const { hydrated } = useStore();
+  const [step, setStep] = useState('request'); // 'request' | 'connecting'
 
   const provider = email.endsWith('@gmail.com') ? 'Google' : 
                    email.endsWith('@outlook.com') || email.endsWith('@hotmail.com') ? 'Microsoft' : 
                    'Email Provider';
 
-  const handleAllow = () => {
-    setLoading(true);
-    setStep('connecting');
-    
-    // Simulate API delay for "extracting data"
-    setTimeout(() => {
-      login(email);
-      setStep('success');
-      
-      setTimeout(() => {
-        router.push('/');
-      }, 1500);
-    }, 2500);
-  };
+  useEffect(() => {
+    if (hydrated && email) {
+      // Auto-start the connection sequence after a brief "detecting" delay
+      const timer = setTimeout(() => {
+        setStep('connecting');
+        const redirectTimer = setTimeout(() => {
+          router.push(`/auth/provider?provider=${encodeURIComponent(provider)}&email=${encodeURIComponent(email)}`);
+        }, 1500);
+        return () => clearTimeout(redirectTimer);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [hydrated, email, router, provider]);
 
   if (!hydrated) return null;
 
@@ -44,61 +42,13 @@ function ConnectContent() {
 
       <div className="auth-modal" style={{ position: 'relative', opacity: 1, transform: 'none', maxWidth: '450px', width: '90%' }}>
         {step === 'request' && (
-          <>
-            <div className="auth-header" style={{ textAlign: 'center' }}>
-              <div className="provider-icon" style={{ 
-                width: '60px', 
-                height: '60px', 
-                background: 'var(--glass2)', 
-                borderRadius: '50%', 
-                margin: '0 auto 20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '1px solid var(--border2)'
-              }}>
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-              </div>
-              <h2 className="auth-title">Connect {provider}</h2>
-              <p className="auth-sub" style={{ fontSize: '0.95rem' }}>
-                Daniel Gadgets wants to access your <strong>{email}</strong> profile to personalize your experience.
-              </p>
+          <div style={{ textAlign: 'center', padding: '20px 0' }}>
+            <div className="loader-container" style={{ position: 'relative', width: '60px', height: '60px', margin: '0 auto 20px' }}>
+               <div className="detecting-ring" style={{ position: 'absolute', inset: 0, border: '2px solid var(--accent-cyan)', borderRadius: '50%', borderTopColor: 'transparent', animation: 'spin 1s linear infinite' }}></div>
             </div>
-
-            <div className="permissions-list" style={{ margin: '30px 0', background: 'var(--glass)', padding: '20px', borderRadius: '12px', border: '1px solid var(--border)' }}>
-              <p style={{ fontSize: '0.85rem', color: 'var(--txt3)', marginBottom: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>This will allow us to:</p>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', fontSize: '0.9rem' }}>
-                  <span style={{ color: 'var(--accent-cyan)' }}>✓</span> View your basic profile (Name & Initial)
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', fontSize: '0.9rem' }}>
-                  <span style={{ color: 'var(--accent-cyan)' }}>✓</span> Verify your email address
-                </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.9rem' }}>
-                  <span style={{ color: 'var(--accent-cyan)' }}>✓</span> Securely sign you in to your account
-                </li>
-              </ul>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-              <button 
-                className="btn-v ghost" 
-                style={{ width: '100%', padding: '12px' }}
-                onClick={() => router.back()}
-              >
-                Cancel
-              </button>
-              <button 
-                className="auth-btn" 
-                style={{ width: '100%', margin: 0 }}
-                onClick={handleAllow}
-              >
-                Allow Access
-              </button>
-            </div>
-          </>
+            <h2 className="auth-title">Detecting Account</h2>
+            <p className="auth-sub">Connecting to <strong>{email}</strong> via {provider}...</p>
+          </div>
         )}
 
         {step === 'connecting' && (
@@ -130,8 +80,8 @@ function ConnectContent() {
                 </svg>
               </div>
             </div>
-            <h2 className="auth-title">Extracting Data...</h2>
-            <p className="auth-sub">Securely connecting to {provider} to retrieve your profile information.</p>
+            <h2 className="auth-title">Handoff to {provider}</h2>
+            <p className="auth-sub">Redirecting you to complete the authentication securely.</p>
             <div style={{ marginTop: '20px', width: '100%', height: '4px', background: 'var(--border)', borderRadius: '2px', overflow: 'hidden' }}>
               <div className="progress-bar" style={{ 
                 width: '60%', 
@@ -142,32 +92,10 @@ function ConnectContent() {
             </div>
           </div>
         )}
-
-        {step === 'success' && (
-          <div style={{ textAlign: 'center', padding: '40px 0' }}>
-            <div style={{ 
-              width: '80px', 
-              height: '80px', 
-              background: 'rgba(0, 242, 255, 0.1)', 
-              borderRadius: '50%', 
-              margin: '0 auto 30px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--accent-cyan)',
-              border: '2px solid var(--accent-cyan)'
-            }}>
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <h2 className="auth-title">Account Connected</h2>
-            <p className="auth-sub">Profile extracted successfully. Redirecting you to the dashboard...</p>
-          </div>
-        )}
       </div>
 
       <style jsx global>{`
+        @keyframes spin { 100% { transform: rotate(360deg); } }
         @keyframes pulse {
           0% { transform: scale(0.8); opacity: 0; }
           50% { opacity: 0.5; }

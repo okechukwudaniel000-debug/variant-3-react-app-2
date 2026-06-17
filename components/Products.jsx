@@ -62,7 +62,7 @@ function ProductCard({ product }) {
     >
       <div className="pcard-badges">
         {product.featured && <span className="pbadge pbadge-feat">Featured</span>}
-        {!product.stock && <span className="pbadge pbadge-out">Out of Stock</span>}
+        <span className="pbadge pbadge-stock">{product.remaining} remaining</span>
       </div>
 
       <button
@@ -84,7 +84,7 @@ function ProductCard({ product }) {
           </div>
         ))}
         <div className="pspec-actions">
-          <button className="btn-v" disabled={!product.stock} onClick={() => addToCart(product.id)}>
+          <button className="btn-v" onClick={() => addToCart(product.id)}>
             Add to Cart
           </button>
           <button className="btn-v ghost" onClick={() => goWA()}>

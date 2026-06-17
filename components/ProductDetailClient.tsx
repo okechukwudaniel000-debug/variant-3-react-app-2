@@ -61,9 +61,9 @@ export default function ProductDetailClient({
             <span className="pdp-price">{formatNaira(product.price)}</span>
             <span
               className="pdp-stock"
-              style={{ color: product.stock ? 'var(--accent-cyan)' : 'rgba(255,120,120,.9)' }}
+              style={{ color: 'var(--accent-cyan)' }}
             >
-              {product.stock ? 'In Stock' : 'Out of Stock'}
+              {product.remaining} remaining
             </span>
           </div>
 
@@ -116,7 +116,6 @@ export default function ProductDetailClient({
             </div>
             <button
               className="btn-p"
-              disabled={!product.stock}
               onClick={() => addToCart(product.id, qty)}
             >
               Add to Cart
