@@ -43,11 +43,11 @@ describe('POST /api/newsletter', () => {
     expect(res.status).toBe(400);
   });
 
-  it('accepts a valid email with 200', async () => {
+  it('accepts a valid email with 201', async () => {
     const res = await newsletterPOST(
       jsonReq('http://x/api/newsletter', { email: 'sub@example.com' }, '10.0.1.2')
     );
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(201);
   });
 });
 

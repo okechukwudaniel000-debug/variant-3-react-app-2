@@ -1,0 +1,18 @@
+[
+  {
+    "email": "test@example.com",
+    "timestamp": "2026-06-17T05:22:41.987Z"
+  },
+  {
+    "email": "sub@example.com",
+    "timestamp": "2026-06-17T05:25:39.459Z"
+  },
+  {
+    "email": "dad@gmail.com",
+    "timestamp": "2026-06-17T05:29:15.368Z"
+  },
+  {
+    "email": "dad@gmail.go",
+    "timestamp": "2026-06-17T05:30:24.772Z"
+  }
+]
