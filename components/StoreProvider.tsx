@@ -1,63 +1,36 @@
 'use client';
 
-import {
+import React, {
   createContext,
-  useCallback,
   useContext,
   useEffect,
-  useMemo,
   useState,
-  type ReactNode,
+  useCallback,
+  useMemo,
 } from 'react';
-import type { CartItem } from '@/lib/types';
-
-/* ============================================================
-   Client-side store for cart, wishlist and recently-viewed,
-   persisted to localStorage. Also holds the shared UI state for
-   the cart drawer and quick-view modal so the nav, product grid
-   and drawer stay in sync. SSR-safe: state starts empty and
-   hydrates on mount (`hydrated` gates count rendering to avoid
-   hydration mismatches).
-============================================================ */
-
-const LS = { cart: 'dg_cart', wishlist: 'dg_wishlist', recent: 'dg_recent', user: 'dg_user' } as const;
-const RECENT_MAX = 8;
-
-type DrawerTab = 'cart' | 'wishlist';
-
-interface User {
-  name: string;
-  email: string;
-  initial: string;
-}
+import type { CartItem, DrawerTab, Product, User } from '@/lib/types';
 
 interface StoreValue {
   hydrated: boolean;
-  // user
   user: User | null;
   login: (email: string) => void;
   logout: () => void;
-  // cart
   cart: CartItem[];
   cartCount: number;
   addToCart: (id: string, qty?: number) => void;
   removeFromCart: (id: string) => void;
   setQty: (id: string, qty: number) => void;
   clearCart: () => void;
-  // wishlist
   wishlist: string[];
   wishlistCount: number;
   isWishlisted: (id: string) => boolean;
   toggleWishlist: (id: string) => void;
-  // recently viewed
   recentlyViewed: string[];
   addRecentlyViewed: (id: string) => void;
-  // drawer
   drawerOpen: boolean;
   drawerTab: DrawerTab;
   openDrawer: (tab?: DrawerTab) => void;
   closeDrawer: () => void;
-  // quick view
   quickViewId: string | null;
   openQuickView: (id: string) => void;
   closeQuickView: () => void;
@@ -65,16 +38,26 @@ interface StoreValue {
 
 const StoreContext = createContext<StoreValue | null>(null);
 
+const LS = {
+  user: 'dg_user',
+  cart: 'dg_cart',
+  wishlist: 'dg_wishlist',
+  recent: 'dg_recent',
+};
+
+const RECENT_MAX = 8;
+
 function readLS<T>(key: string, fallback: T): T {
+  if (typeof window === 'undefined') return fallback;
   try {
-    const raw = localStorage.getItem(key);
-    return raw ? (JSON.parse(raw) as T) : fallback;
+    const val = localStorage.getItem(key);
+    return val ? JSON.parse(val) : fallback;
   } catch {
     return fallback;
   }
 }
 
-export function StoreProvider({ children }: { children: ReactNode }) {
+export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -86,11 +69,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   // Hydrate from localStorage on mount.
   useEffect(() => {
-    setUser(readLS<User | null>(LS.user, null));
-    setCart(readLS<CartItem[]>(LS.cart, []));
-    setWishlist(readLS<string[]>(LS.wishlist, []));
-    setRecentlyViewed(readLS<string[]>(LS.recent, []));
-    setHydrated(true);
+    const user = readLS<User | null>(LS.user, null);
+    const cart = readLS<CartItem[]>(LS.cart, []);
+    const wishlist = readLS<string[]>(LS.wishlist, []);
+    const recent = readLS<string[]>(LS.recent, []);
+
+    queueMicrotask(() => {
+      setUser(user);
+      setCart(cart);
+      setWishlist(wishlist);
+      setRecentlyViewed(recent);
+      setHydrated(true);
+    });
   }, []);
 
   // Persist after hydration (never overwrite stored data before we've read it).

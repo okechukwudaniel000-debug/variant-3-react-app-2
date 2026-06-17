@@ -13,7 +13,7 @@
       "Storage": "256GB",
       "Camera": "48MP Fusion"
     },
-    "image": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&q=80&w=500",
+    "image": "/iPhone 16 Pro Max 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
@@ -30,7 +30,7 @@
       "Storage": "128GB",
       "Camera": "48MP Dual"
     },
-    "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=500",
+    "image": "/iPhone 16 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
@@ -47,7 +47,7 @@
       "Camera": "48MP Main",
       "Port": "USB-C"
     },
-    "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=500",
+    "image": "/iPhone 15 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(18,94,160,.16),rgba(140,92,255,.14))"
   },
   {
@@ -64,7 +64,7 @@
       "Storage": "8GB / 256GB",
       "Camera": "50MP Triple"
     },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy S24 FE 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -81,7 +81,7 @@
       "Storage": "12GB / 256GB",
       "Battery": "4400mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy Z Fold 6 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -98,7 +98,7 @@
       "Display": "6.9\" AMOLED Fold",
       "Camera": "64MP Dual"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "/Phantom V Flip 2 5G 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -115,7 +115,7 @@
       "Display": "120Hz AMOLED",
       "Camera": "108MP Triple"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "/Note 40 Pro 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -132,7 +132,7 @@
       "Camera": "50MP Main",
       "Battery": "5000mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "/Spark 30 Pro 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -149,7 +149,7 @@
       "Camera": "108MP Dual",
       "Battery": "5030mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=500",
+    "image": "/Redmi 13 8GB 256GB.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -159,14 +159,14 @@
     "name": "Galaxy A06 4GB 128GB",
     "description": "Affordable everyday Samsung with a 50MP camera and 5000mAh battery.",
     "price": 156500,
-    "stock": false,
+    "stock": true,
     "specs": {
       "Memory": "4GB / 128GB",
       "Display": "6.7\" HD+",
       "Camera": "50MP Dual",
       "Battery": "5000mAh"
     },
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy A06 4GB 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -176,14 +176,14 @@
     "name": "Ideapad Flex 5 14\"",
     "description": "Versatile 2-in-1 convertible with 8GB RAM and a fast 512GB SSD.",
     "price": 770000,
-    "stock": false,
+    "stock": true,
     "specs": {
       "Memory": "8GB RAM",
       "Storage": "512GB SSD",
       "Display": "14\" Touch",
       "Form": "2-in-1 Convertible"
     },
-    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
+    "image": "/Ideapad Flex 5 14.png",
     "gradient": "linear-gradient(135deg,rgba(200,200,200,.1),rgba(80,80,80,.15))"
   },
   {
@@ -193,14 +193,14 @@
     "name": "Latitude 7389 2-in-1",
     "description": "13.3\" business convertible, Core i7, 16GB RAM and a 256GB SSD on Win 10 Pro.",
     "price": 437000,
-    "stock": false,
+    "stock": true,
     "specs": {
       "Processor": "Intel Core i7",
       "Memory": "16GB RAM",
       "Storage": "256GB SSD",
       "Display": "13.3\" Touch"
     },
-    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=500",
+    "image": "/Latitude 7389 2-in-1.png",
     "gradient": "linear-gradient(135deg,rgba(150,155,180,.12),rgba(80,85,110,.18))"
   },
   {
@@ -217,7 +217,7 @@
       "Rating": "10ATM / IP68",
       "Health": "BioActive Sensor"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy Watch Ultra LTE 47mm.png",
     "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
   },
   {
@@ -234,7 +234,7 @@
       "Health": "BioActive Sensor",
       "OS": "Wear OS"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy Watch7 44mm.png",
     "gradient": "linear-gradient(135deg,rgba(14,30,120,.38),rgba(5,12,55,.45))"
   },
   {
@@ -251,7 +251,7 @@
       "Battery": "Up to 36 Hours",
       "Rating": "WR100 / EN13319"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "/Apple Watch Ultra 2 49mm.png",
     "gradient": "linear-gradient(135deg,rgba(130,140,200,.1),rgba(70,80,140,.15))"
   },
   {
@@ -268,7 +268,7 @@
       "Modes": "Multi-Sport",
       "Battery": "Long Life"
     },
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=500",
+    "image": "/Tecno Watch 1.png",
     "gradient": "linear-gradient(135deg,rgba(34,197,94,.16),rgba(16,185,129,.14),rgba(7,23,19,.24))"
   },
   {
@@ -285,7 +285,7 @@
       "Case": "USB-C MagSafe",
       "Battery": "30hrs w/ Case"
     },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "image": "/AirPods Pro (2nd Gen).png",
     "gradient": "linear-gradient(135deg,rgba(170,175,200,.12),rgba(90,95,115,.18))"
   },
   {
@@ -302,7 +302,7 @@
       "Battery": "30 Hours",
       "Connectivity": "BT 5.2"
     },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "image": "/WH-1000XM5 Headphones.png",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -319,7 +319,7 @@
       "Connectivity": "BT 5.4",
       "Battery": "30hrs w/ Case"
     },
-    "image": "https://images.unsplash.com/photo-1590664095641-7fa05f689813?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy Buds 3 Pro.png",
     "gradient": "linear-gradient(135deg,rgba(20,40,160,.22),rgba(8,18,80,.28))"
   },
   {
@@ -336,7 +336,7 @@
       "Network": "LTE + WiFi",
       "Battery": "5100mAh"
     },
-    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=500",
+    "image": "/Galaxy Tab A9 LTE 64GB.png",
     "gradient": "linear-gradient(135deg,rgba(188,0,255,.1),rgba(60,0,100,.2))"
   },
   {
@@ -353,7 +353,7 @@
       "Edition": "Disc Edition",
       "Feature": "DualSense Haptics"
     },
-    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
+    "image": "/PlayStation 5 Slim 1TB.png",
     "gradient": "linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,242,255,.1))"
   },
   {
@@ -370,7 +370,7 @@
       "Chipset": "Snapdragon XR2 Gen 2",
       "Feature": "Colour Passthrough"
     },
-    "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=500",
+    "image": "/Meta Quest 3 128GB.png",
     "gradient": "linear-gradient(135deg,rgba(0,242,255,.1),rgba(0,80,120,.2))"
   }
 ]

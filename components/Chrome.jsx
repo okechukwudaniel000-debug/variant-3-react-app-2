@@ -21,7 +21,9 @@ export default function Chrome({ menuLinks, showThemeToggle = false }) {
   // Restore saved theme on mount.
   useEffect(() => {
     const savedTheme = localStorage.getItem('dg_theme') || 'dark';
-    setTheme(savedTheme);
+    queueMicrotask(() => {
+      setTheme(savedTheme);
+    });
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
