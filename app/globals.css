@@ -493,8 +493,24 @@ h4 {
 }
 .sec-title {
   font-size: clamp(1.7rem, 3.5vw, 2.6rem);
-  color: var(--txt);
   margin-bottom: 14px;
+  /* Colour-flow gradient (replaces the old JS text-scramble). The animated
+     background sweep is GPU-composited, so it stays smooth on mobile browsers
+     without any per-frame JS. */
+  background: linear-gradient(
+    90deg,
+    var(--txt) 0%,
+    var(--accent-cyan) 25%,
+    var(--accent-violet) 50%,
+    var(--accent-cyan) 75%,
+    var(--txt) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: title-color-flow 8s linear infinite;
 }
 .sec-sub {
   font-size: 1rem;
@@ -894,27 +910,66 @@ h4 {
   animation: fadeup 1.6s 0.1s both;
   max-width: 100%;
   overflow-wrap: break-word;
-  /* Promote the scrambling title to its own layer and isolate its layout so
-     per-frame text swaps don't trigger page-wide reflow/repaint on mobile. */
+  /* Promote the title to its own layer so the colour-flow gradient on the
+     children composites on the GPU instead of repainting on mobile. */
   contain: layout style;
   transform: translateZ(0);
 }
 .h1-main {
   display: inline-block;
   max-width: 100%;
-  background: linear-gradient(135deg, #eff8ff 0%, #c7d2fe 40%, #92a7ff 100%);
+  background: linear-gradient(
+    90deg,
+    #eff8ff 0%,
+    #c7d2fe 25%,
+    #92a7ff 50%,
+    #c7d2fe 75%,
+    #eff8ff 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: title-color-flow 7s linear infinite;
 }
 .h1-accent {
   display: block;
   margin-top: 2px;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet), #ffffff);
+  background: linear-gradient(
+    90deg,
+    var(--accent-cyan) 0%,
+    var(--accent-violet) 25%,
+    #ffffff 50%,
+    var(--accent-violet) 75%,
+    var(--accent-cyan) 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 0 18px rgba(0, 242, 255, 0.18);
+  animation: title-color-flow 7s linear infinite;
+}
+
+/* Drives the heading colour-flow: slides the oversized gradient across the
+   clipped text. Pure compositor work — no layout/paint per frame. */
+@keyframes title-color-flow {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}
+
+/* Respect users who ask for less motion: pin the gradient to a static frame. */
+@media (prefers-reduced-motion: reduce) {
+  .sec-title,
+  .h1-main,
+  .h1-accent {
+    animation: none;
+    background-position: 0% 50%;
+  }
 }
 
 .hero-sub {
