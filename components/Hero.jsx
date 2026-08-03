@@ -199,7 +199,7 @@ export default function Hero() {
   }, []);
 
   function scrollToProducts() {
-    document.getElementById('products')?.scrollIntoView();
+    window.location.href = 'https://featured.daniel-gadgets.com';
   }
 
   return (

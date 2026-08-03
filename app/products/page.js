@@ -12,10 +12,10 @@ export const metadata = {
 
 const MENU_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/#products', label: 'Products' },
-  { href: '/#reviews', label: 'Reviews' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Products' },
+  { href: 'https://reviews.daniel-gadgets.com', label: 'Reviews' },
   { href: '/#about', label: 'About Us' },
-  { href: '/#contact', label: 'Contact' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Contact' },
 ];
 
 export default function ProductsPage() {

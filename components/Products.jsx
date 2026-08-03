@@ -119,8 +119,8 @@ function ProductCard({ product }) {
 
       <div className="pinfo">
         <div className="pcat">{product.brand}</div>
-        <h3 className="pname">
-          <Link href={`/products/${product.id}`}>{product.name}</Link>
+          <h3 className="pname">
+          <Link href={`https://featured.daniel-gadgets.com/${product.id}`}>{product.name}</Link>
         </h3>
         <p className="pdesc">{product.description}</p>
         <div className="pfooter">

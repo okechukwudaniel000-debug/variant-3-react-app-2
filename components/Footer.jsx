@@ -5,24 +5,24 @@ import Link from 'next/link';
 import { useStore } from './StoreProvider';
 
 const SHOP_LINKS = [
-  { href: '/products', label: 'All Products' },
-  { href: '/#products', label: 'Phones' },
-  { href: '/#products', label: 'Laptops' },
-  { href: '/#products', label: 'Audio' },
-  { href: '/#products', label: 'Gaming' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'All Products' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Phones' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Laptops' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Audio' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Gaming' },
 ];
 
 const COMPANY_LINKS = [
   { href: '/#about', label: 'About Us' },
-  { href: '/#reviews', label: 'Reviews' },
-  { href: '/#contact', label: 'Contact' },
+  { href: 'https://reviews.daniel-gadgets.com', label: 'Reviews' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Contact' },
 ];
 
 const SUPPORT_LINKS = [
-  { href: '/#contact', label: 'Warranty' },
-  { href: '/#contact', label: 'Delivery' },
-  { href: '/#contact', label: 'Returns Policy' },
-  { href: '/#contact', label: 'Privacy Policy' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Warranty' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Delivery' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Returns Policy' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Privacy Policy' },
 ];
 
 const SOCIALS = [

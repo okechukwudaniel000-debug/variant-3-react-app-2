@@ -7,14 +7,14 @@ import ClientFX from '@/components/ClientFX';
 import ProductDetailClient from '@/components/ProductDetailClient';
 import { getAllProducts, getProductById, getRelatedProducts, formatNaira } from '@/lib/products';
 
-const SITE_URL = 'https://daniel-gadgets.vercel.app';
+const SITE_URL = 'https://daniel-gadgets.com';
 
 const MENU_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/#products', label: 'Products' },
-  { href: '/#reviews', label: 'Reviews' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Products' },
+  { href: 'https://reviews.daniel-gadgets.com', label: 'Reviews' },
   { href: '/#about', label: 'About Us' },
-  { href: '/#contact', label: 'Contact' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Contact' },
 ];
 
 // Pre-render a static page per product.
