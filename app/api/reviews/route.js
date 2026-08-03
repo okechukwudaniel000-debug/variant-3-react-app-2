@@ -8,3 +8,4 @@ function getHandler() {
 }
 
 export const GET = withCors(getHandler);
+export const OPTIONS = withCors(async () => new NextResponse(null, { status: 204 }));

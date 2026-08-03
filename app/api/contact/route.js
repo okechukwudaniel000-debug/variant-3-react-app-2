@@ -51,4 +51,4 @@ async function postHandler(request) {
 }
 
 export const POST = withCors(postHandler);
-export const OPTIONS = withCors(async () => new NextResponse(null, { status: 204 }));
+

@@ -3,13 +3,14 @@ import { validateStrings } from '@/lib/validation';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
+import { withCors } from '@/lib/cors';
 
 const MAX_BODY_BYTES = 2 * 1024;
 const DATA_DIR = join(process.cwd(), 'data');
 const SUBSCRIBERS_FILE = join(DATA_DIR, 'subscribers.json');
 
 // POST /api/newsletter -> validated, rate-limited email capture (footer signup).
-export async function POST(request: Request): Promise<NextResponse> {
+async function postHandler(request: Request): Promise<NextResponse> {
   const ip = clientIp(request);
   const limit = rateLimit(`newsletter:${ip}`, 5, 60_000);
   if (!limit.allowed) {
@@ -82,3 +83,6 @@ export async function POST(request: Request): Promise<NextResponse> {
     return NextResponse.json({ error: 'Failed to save subscription. Please try again.' }, { status: 500 });
   }
 }
+
+export const POST = withCors(postHandler);
+export const OPTIONS = withCors(async () => new NextResponse(null, { status: 204 }));
