@@ -20,8 +20,9 @@ import type { CartItem } from '@/lib/types';
    hydration mismatches).
 ============================================================ */
 
-const LS = { cart: 'dg_cart', wishlist: 'dg_wishlist', recent: 'dg_recent', user: 'dg_user' } as const;
+const LS = { cart: 'dg_cart', wishlist: 'dg_wishlist', recent: 'dg_recent', user: 'dg_user', auth: 'dg_auth' } as const;
 const RECENT_MAX = 8;
+const AUTH_COOKIE_DOMAIN = '.daniel-gadgets.com';
 
 type DrawerTab = 'cart' | 'wishlist';
 
@@ -31,33 +32,44 @@ interface User {
   initial: string;
 }
 
+function readCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function setCookie(name: string, value: string, days: number): void {
+  if (typeof document === 'undefined') return;
+  const expires = new Date(Date.now() + days * 86_400_000).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; domain=${AUTH_COOKIE_DOMAIN}; Secure; SameSite=Lax`;
+}
+
+function deleteCookie(name: string): void {
+  if (typeof document === 'undefined') return;
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${AUTH_COOKIE_DOMAIN}; Secure; SameSite=Lax`;
+}
+
 interface StoreValue {
   hydrated: boolean;
-  // user
   user: User | null;
   login: (email: string) => void;
   logout: () => void;
-  // cart
   cart: CartItem[];
   cartCount: number;
   addToCart: (id: string, qty?: number) => void;
   removeFromCart: (id: string) => void;
   setQty: (id: string, qty: number) => void;
   clearCart: () => void;
-  // wishlist
   wishlist: string[];
   wishlistCount: number;
   isWishlisted: (id: string) => boolean;
   toggleWishlist: (id: string) => void;
-  // recently viewed
   recentlyViewed: string[];
   addRecentlyViewed: (id: string) => void;
-  // drawer
   drawerOpen: boolean;
   drawerTab: DrawerTab;
   openDrawer: (tab?: DrawerTab) => void;
   closeDrawer: () => void;
-  // quick view
   quickViewId: string | null;
   openQuickView: (id: string) => void;
   closeQuickView: () => void;
@@ -95,9 +107,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const storedCart = readLS<CartItem[]>(LS.cart, []);
     const storedWishlist = readLS<string[]>(LS.wishlist, []);
     const storedRecent = readLS<string[]>(LS.recent, []);
+    const cookieAuth = readCookie(LS.auth);
+
+    let resolvedUser = storedUser;
+    if (!resolvedUser && cookieAuth) {
+      try {
+        resolvedUser = JSON.parse(cookieAuth) as User;
+      } catch {
+        // Ignore malformed cookie
+      }
+    }
 
     /* eslint-disable react-hooks/set-state-in-effect -- one-time external-store hydration, see above */
-    setUser(storedUser);
+    setUser(resolvedUser);
     setCart(storedCart);
     setWishlist(storedWishlist);
     setRecentlyViewed(storedRecent);
@@ -128,7 +150,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, [drawerOpen, quickViewId]);
 
   const login = useCallback((email: string) => {
-    // Extract name from email: e.g. "john.doe@example.com" -> "John Doe"
     const namePart = email.split('@')[0];
     const formattedName = namePart
       .split(/[._-]/)
@@ -141,10 +162,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       initial: formattedName.charAt(0).toUpperCase(),
     };
     setUser(newUser);
+    setCookie(LS.auth, JSON.stringify(newUser), 30);
   }, []);
 
   const logout = useCallback(() => {
     setUser(null);
+    deleteCookie(LS.auth);
   }, []);
 
   const addToCart = useCallback((id: string, qty = 1) => {
