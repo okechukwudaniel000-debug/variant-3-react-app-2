@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server';
 import { validateStrings } from '@/lib/validation';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
+import { withCors } from '@/lib/cors';
 
 // Reject oversized bodies outright (defense against payload abuse).
 const MAX_BODY_BYTES = 8 * 1024;
 
 // POST /api/contact -> validated, rate-limited contact relay.
-export async function POST(request) {
+async function postHandler(request) {
   const ip = clientIp(request);
   const limit = rateLimit(`contact:${ip}`, 5, 60_000);
   if (!limit.allowed) {
@@ -48,3 +49,6 @@ export async function POST(request) {
 
   return NextResponse.json({ success: true, message: 'Message received. We will be in touch.' });
 }
+
+export const POST = withCors(postHandler);
+export const OPTIONS = withCors(async () => new NextResponse(null, { status: 204 }));
