@@ -30,7 +30,7 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
-const SITE_URL = 'https://daniel-gadgets.vercel.app';
+const SITE_URL = 'https://daniel-gadgets.com';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

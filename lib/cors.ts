@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const allowedOrigins = [
-  'https://yourdomain.com',
-  'https://featured.yourdomain.com',
-  'https://reviews.yourdomain.com',
-  'https://contact.yourdomain.com',
+  'https://daniel-gadgets.com',
+  'https://featured.daniel-gadgets.com',
+  'https://reviews.daniel-gadgets.com',
+  'https://contact.daniel-gadgets.com',
+  'https://api.daniel-gadgets.com',
   'http://localhost:3000',
 ];
 

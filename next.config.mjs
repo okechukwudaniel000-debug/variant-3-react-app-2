@@ -40,7 +40,32 @@ const nextConfig = {
     return [
       {
         source: '/products',
-        destination: '/#products',
+        destination: 'https://featured.daniel-gadgets.com',
+        permanent: true,
+      },
+      {
+        source: '/products/:path*',
+        destination: 'https://featured.daniel-gadgets.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/reviews',
+        destination: 'https://reviews.daniel-gadgets.com',
+        permanent: true,
+      },
+      {
+        source: '/reviews/:path*',
+        destination: 'https://reviews.daniel-gadgets.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: 'https://contact.daniel-gadgets.com',
+        permanent: true,
+      },
+      {
+        source: '/contact/:path*',
+        destination: 'https://contact.daniel-gadgets.com/:path*',
         permanent: true,
       },
     ];
