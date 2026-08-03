@@ -8,10 +8,10 @@ import ClientFX from '@/components/ClientFX';
 
 const MENU_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '#products', label: 'Featured Products' },
-  { href: '#reviews', label: 'Customer Reviews' },
-  { href: '#about', label: 'About Our Brand' },
-  { href: '#contact', label: 'Get in Touch' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Featured Products' },
+  { href: 'https://reviews.daniel-gadgets.com', label: 'Customer Reviews' },
+  { href: '/#about', label: 'About Our Brand' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Get in Touch' },
 ];
 
 export default function HomePage() {

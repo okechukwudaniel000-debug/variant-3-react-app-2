@@ -9,8 +9,8 @@ import Footer from '@/components/Footer';
 
 const MENU_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/#products', label: 'Products' },
-  { href: '/#contact', label: 'Support' },
+  { href: 'https://featured.daniel-gadgets.com', label: 'Products' },
+  { href: 'https://contact.daniel-gadgets.com', label: 'Support' },
 ];
 
 export default function LoginPage() {

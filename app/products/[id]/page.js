@@ -88,7 +88,7 @@ export default async function ProductPage({ params }) {
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span aria-hidden="true">/</span>
-          <Link href="/products">Products</Link>
+          <Link href="https://featured.daniel-gadgets.com">Products</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{product.name}</span>
         </nav>
