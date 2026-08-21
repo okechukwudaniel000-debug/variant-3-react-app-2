@@ -44,15 +44,15 @@ describe('getSubdomain', () => {
     expect(getSubdomain('daniel-gadgets.com.')).toBeNull();
   });
 
-  it('returns null for api subdomain', () => {
+  it('extracts api subdomain', () => {
     expect(getSubdomain('api.daniel-gadgets.com')).toBe('api');
   });
 
-  it('returns null for www subdomain', () => {
+  it('extracts www subdomain', () => {
     expect(getSubdomain('www.daniel-gadgets.com')).toBe('www');
   });
 
-  it('returns null for unknown subdomain', () => {
+  it('extracts unknown subdomain', () => {
     expect(getSubdomain('unknown.daniel-gadgets.com')).toBe('unknown');
   });
 

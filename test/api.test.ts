@@ -5,7 +5,7 @@ import { POST as newsletterPOST } from '@/app/api/newsletter/route';
 import { GET as productsGET } from '@/app/api/products/route';
 
 function jsonReq(url: string, body: unknown, ip: string) {
-  return new Request(url, {
+  return new NextRequest(url, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-forwarded-for': ip },
     body: JSON.stringify(body),
